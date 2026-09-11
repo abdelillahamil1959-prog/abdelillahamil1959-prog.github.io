@@ -1,139 +1,61 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<meta charset="UTF-8">
-<title>خدمات الذكاء الاصطناعي للكتابة والتحليل</title>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #f4f1e8;
-        color: #333;
-    }
-
-    header {
-        background: #556b2f;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        position: sticky;
-        top: 0;
-    }
-
-    .lang-switch {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        background: white;
-        color: #556b2f;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    section {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
-    }
-
-    h2 {
-        color: #556b2f;
-    }
-
-    .service-box {
-        background: white;
-        margin: 10px 0;
-        padding: 12px;
-        border-radius: 8px;
-        box-shadow: 0 3px 5px #ccc;
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>مرحبا بكم في موقعي</title>
+    <style>
+        body {
+            font-family: "Tahoma", sans-serif;
+            direction: rtl;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
-    <h1 id="title">خدمات الذكاء الاصطناعي للكتابة والتحليل</h1>
-    <div class="lang-switch" onclick="switchLang()">AR | EN</div>
+    <h1>مرحبا بكم في موقعي الشخصي</h1>
 </header>
 
 <section>
-
-    <h2 id="about-title">من أنا</h2>
-    <p id="about-text">
-        أنا عبدالإله، أقدم خدمات الكتابة، التلخيص، التحليل، وإعادة الصياغة باستخدام الذكاء الاصطناعي.
+    <p>
+        أهلاً وسهلاً بكم في موقعي الشخصي الذي أشارك فيه أفكاري، تجاربي، وبعض الأعمال التي أعمل عليها.
+        هذا الموقع هو خطوة أولى نحو بناء مساحة رقمية بسيطة وهادئة، أكتب فيها ما أحب وأعرض فيها ما أعمل عليه.
     </p>
 
-    <h2 id="services-title">الخدمات</h2>
-
-    <div class="service-box" id="s1">تلخيص الكتب والمقالات</div>
-    <div class="service-box" id="s2">إعادة صياغة احترافية</div>
-    <div class="service-box" id="s3">كتابة محتوى اليوتيوب</div>
-    <div class="service-box" id="s4">كتابة مقالات</div>
-    <div class="service-box" id="s5">تحليل نصوص وأفكار</div>
-    <div class="service-box" id="s6">تفريغ صوت وفيديو</div>
-    <div class="service-box" id="s7">رسائل قانونية بسيطة</div>
-
-    <h2 id="workflow-title">كيف أعمل؟</h2>
-    <p id="workflow-text">
-        أعمل باستخدام أدوات الذكاء الاصطناعي لتقديم نتائج دقيقة وسريعة.
+    <p>
+        أسعى إلى تقديم محتوى واضح، منظم، وهادئ، يعكس طريقة تفكيري واهتمامي بالكتابة والتحليل.
+        يمكنكم زيارة الموقع بين الحين والآخر للاطلاع على التحديثات الجديدة.
     </p>
 
+    <p>
+        شكراً لزيارتكم، وأتمنى لكم وقتاً طيباً.
+    </p>
 </section>
-
-<script>
-let lang = "ar";
-
-function switchLang() {
-
-    if (lang === "ar") {
-        lang = "en";
-
-        document.getElementById("title").innerText = "AI Writing & Analysis Services";
-        document.getElementById("about-title").innerText = "About Me";
-        document.getElementById("about-text").innerText =
-            "I am Abdelillah, offering writing, summarizing, analysis, and rewriting services using AI.";
-
-        document.getElementById("services-title").innerText = "Services";
-        document.getElementById("s1").innerText = "Book & Article Summaries";
-        document.getElementById("s2").innerText = "Professional Rewriting";
-        document.getElementById("s3").innerText = "YouTube Content Writing";
-        document.getElementById("s4").innerText = "Article Writing";
-        document.getElementById("s5").innerText = "Text & Idea Analysis";
-        document.getElementById("s6").innerText = "Audio & Video Transcription";
-        document.getElementById("s7").innerText = "Simple Legal Letters";
-
-        document.getElementById("workflow-title").innerText = "Workflow";
-        document.getElementById("workflow-text").innerText =
-            "I use AI tools to deliver fast and high‑quality results.";
-    }
-
-    else {
-        lang = "ar";
-
-        document.getElementById("title").innerText = "خدمات الذكاء الاصطناعي للكتابة والتحليل";
-        document.getElementById("about-title").innerText = "من أنا";
-        document.getElementById("about-text").innerText =
-            "أنا عبدالإله، أقدم خدمات الكتابة، التلخيص، التحليل، وإعادة الصياغة باستخدام الذكاء الاصطناعي.";
-
-        document.getElementById("services-title").innerText = "الخدمات";
-        document.getElementById("s1").innerText = "تلخيص الكتب والمقالات";
-        document.getElementById("s2").innerText = "إعادة صياغة احترافية";
-        document.getElementById("s3").innerText = "كتابة محتوى اليوتيوب";
-        document.getElementById("s4").innerText = "كتابة مقالات";
-        document.getElementById("s5").innerText = "تحليل نصوص وأفكار";
-        document.getElementById("s6").innerText = "تفريغ صوت وفيديو";
-        document.getElementById("s7").innerText = "رسائل قانونية بسيطة";
-
-        document.getElementById("workflow-title").innerText = "كيف أعمل؟";
-        document.getElementById("workflow-text").innerText =
-            "أعمل باستخدام أدوات الذكاء الاصطناعي لتقديم نتائج دقيقة وسريعة.";
-    }
-}
-</script>
 
 </body>
 </html>
