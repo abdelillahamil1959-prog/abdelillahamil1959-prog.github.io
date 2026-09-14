@@ -13,17 +13,22 @@
         direction: rtl;
     }
 
-    /* زر اللغة */
+    /* زر اللغة الدائري */
     .lang-switch {
-        text-align: left;
-        padding: 10px 20px;
+        display: flex;
+        gap: 10px;
+        padding: 15px;
     }
     .lang-switch a {
-        margin-left: 10px;
-        text-decoration: none;
-        color: #333;
+        width: 45px;
+        height: 45px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
         font-weight: bold;
-        font-size: 16px;
+        text-decoration: none;
     }
 
     /* صورة الهيدر */
@@ -105,10 +110,21 @@
 
 <body>
 
-<!-- زر اللغة -->
+<!-- زر اللغة الدائري -->
 <div class="lang-switch">
-    <a href="#">AR</a>
-    <a href="#">EN</a>
+
+    <!-- زر AR -->
+    <a href="index.html"
+       style="background:#6B7A3A;">
+        AR
+    </a>
+
+    <!-- زر EN (الإصلاح هنا) -->
+    <a href="index-en.html"
+       style="background:#4A90E2;">
+        EN
+    </a>
+
 </div>
 
 <!-- صورة الهيدر -->
@@ -140,14 +156,14 @@
     <p>أنا عبدالإله، أقدّم خدمات كتابة وتحليل باستخدام الذكاء الاصطناعي بأسلوب هادئ وواضح ومتوازن. أجمع بين خبرتي في ترتيب الأفكار وبين قوة الأدوات الحديثة، لأقدّم محتوى احترافيًا يناسب هدفك بدقة، بدون مبالغة، وبدون تعقيد.</p>
 </div>
 
-<!-- روح المكان (الفصل الأخير) -->
+<!-- روح المكان -->
 <div id="nature" class="section">
     <h3>روح المكان</h3>
     <p>
         بين الجبال التي تحيط بالبلدة،  
         وبجانب وادي رينو الذي يعبر الأرض بهدوء،  
         أجد المساحة التي أحتاجها لأعمل بتركيز كامل.  
-        هنا، حيث الهواء نظيف، والأفكار تأتي بانسيابية،  
+        هنا، حيث الهواء نظيف والأفكار تأتي بانسيابية،  
         يصبح التفكير أكثر صفاء، والكتابة أكثر وضوحًا،  
         والتحليل أكثر دقة.
         <br><br>
@@ -207,3 +223,4 @@
 
 </body>
 </html>
+
