@@ -1,272 +1,239 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>Abdelillah Amil – Writing & AI Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            margin: 0;
-            font-family: "Noto Sans Arabic", system-ui, sans-serif;
-            background-color: #f7f7f3;
-            color: #222;
-            line-height: 1.8;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عبدالإله أميل – خدمات الكتابة والذكاء الاصطناعي</title>
 
-        :root {
-            --olive: #6b7b4d;
-            --olive-dark: #4b5a33;
-            --light-bg: #f7f7f3;
-            --soft-border: #ddd;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: "Cairo", sans-serif;
+        background-color: #f7f7f3;
+        color: #222;
+        line-height: 1.8;
+        transition: all 0.3s ease;
+    }
 
-        header {
-            background-color: #ffffff;
-            border-bottom: 1px solid var(--soft-border);
-            padding: 16px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+    :root {
+        --olive-dark: #4b5a33;
+        --olive-light: #8a9b66;
+        --mountain: #6e7f5f;
+        --forest: #4f6b3a;
+        --water: #7aa6c2;
+        --sun: #d8b45b;
+        --earth: #b08f6a;
+        --cloud: #d9d9d9;
+    }
 
-        .brand {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--olive-dark);
-        }
+    header {
+        background-color: #ffffff;
+        border-bottom: 1px solid #ddd;
+        padding: 16px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .brand-sub {
-            font-size: 12px;
-            color: #777;
-        }
+    /* زر اللغة */
+    .btn-ar {
+        background-color: var(--olive-dark);
+        color: #fff;
+        padding: 6px 14px;
+        border-radius: 50px; /* دائري */
+        font-weight: bold;
+        cursor: pointer;
+    }
 
-        nav a {
-            margin-left: 12px;
-            text-decoration: none;
-            color: #333;
-            font-size: 14px;
-        }
+    .btn-en {
+        background-color: var(--olive-light);
+        color: #fff;
+        padding: 6px 14px;
+        border-radius: 6px; /* مربّع */
+        font-weight: bold;
+        cursor: pointer;
+    }
 
-        nav a:hover {
-            color: var(--olive-dark);
-        }
+    nav {
+        display: flex;
+        gap: 12px;
+    }
 
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 24px 16px 80px;
-        }
+    /* أشكال القائمة */
+    .nav-hilal {
+        padding: 6px 14px;
+        background-color: var(--forest);
+        color: #fff;
+        border-radius: 40px 10px;
+    }
 
-        section {
-            margin-bottom: 56px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #eee;
-        }
+    .nav-shams {
+        padding: 6px 14px;
+        background-color: var(--sun);
+        color: #fff;
+        border-radius: 50%;
+    }
 
-        h1, h2 {
-            color: var(--olive-dark);
-            margin-bottom: 12px;
-        }
+    .nav-murabba {
+        padding: 6px 14px;
+        background-color: var(--earth);
+        color: #fff;
+        border-radius: 4px;
+    }
 
-        h1 {
-            font-size: 24px;
-        }
+    .nav-daera {
+        padding: 6px 14px;
+        background-color: var(--water);
+        color: #fff;
+        border-radius: 50px;
+    }
 
-        h2 {
-            font-size: 20px;
-        }
+    .nav-mustatil {
+        padding: 6px 20px;
+        background-color: var(--mountain);
+        color: #fff;
+        border-radius: 8px;
+    }
 
-        p {
-            margin: 8px 0;
-        }
+    .nav-hada {
+        padding: 6px 14px;
+        background-color: var(--cloud);
+        color: #333;
+        border-radius: 0px;
+    }
 
-        .hero {
-            background-color: #f0f2ea;
-            border: 1px solid #e0e3d5;
-            padding: 24px;
-            border-radius: 8px;
-            margin-bottom: 32px;
-        }
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 24px 16px 80px;
+    }
 
-        .hero-buttons {
-            margin-top: 16px;
-        }
+    /* العناوين داخل الصفحة */
+    .section-title {
+        padding: 10px 16px;
+        border-radius: 8px;
+        color: #fff;
+        margin-bottom: 12px;
+        display: inline-block;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 8px 16px;
-            margin-right: 8px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 14px;
-        }
+    .mountain { background-color: var(--mountain); }
+    .forest { background-color: var(--forest); }
+    .water { background-color: var(--water); }
+    .sun { background-color: var(--sun); }
+    .earth { background-color: var(--earth); }
+    .cloud { background-color: var(--cloud); color: #333; }
 
-        .btn-primary {
-            background-color: var(--olive-dark);
-            color: #fff;
-        }
-
-        .btn-secondary {
-            border: 1px solid var(--olive-dark);
-            color: var(--olive-dark);
-            background-color: #fff;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        footer {
-            background-color: var(--olive-dark);
-            color: #fff;
-            padding: 16px 24px;
-            font-size: 13px;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 4px 0;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav {
-                margin-top: 8px;
-            }
-        }
-    </style>
+</style>
 </head>
+
 <body>
 
 <header>
-    <div>
-        <div class="brand">Abdelillah Amil</div>
-        <div class="brand-sub">Writing & AI Services – Vergato, Emilia Romagna, Italy</div>
-    </div>
+    <div id="brand">عبدالإله أميل</div>
+
     <nav>
-        <a href="#home">الرئيسية</a>
-        <a href="#about">من أنا</a>
-        <a href="#services">الخدمات</a>
-        <a href="#ai">لماذا الذكاء الاصطناعي؟</a>
-        <a href="#order">اطلب خدمة</a>
-        <a href="#contact">التواصل</a>
+        <div class="nav-hilal" data-key="home"></div>
+        <div class="nav-shams" data-key="about"></div>
+        <div class="nav-murabba" data-key="services"></div>
+        <div class="nav-daera" data-key="why"></div>
+        <div class="nav-mustatil" data-key="order"></div>
+        <div class="nav-hada" data-key="contact"></div>
     </nav>
+
+    <div>
+        <button class="btn-ar" onclick="setLang('ar')">العربية</button>
+        <button class="btn-en" onclick="setLang('en')">English</button>
+    </div>
 </header>
 
 <main>
 
-    <section id="home">
-        <div class="hero">
-            <h1>بين الجبال، الأشجار، ووادي Reno…</h1>
-            <p>
-                أكتب نصوصًا تحمل هدوء الطبيعة وروح الإنسان.  
-                أنا عبدالإله عامل، أعمل من بلدة Vergato في Emilia Romagna بإيطاليا، حيث تمنحني الطبيعة تركيزًا ووضوحًا ينعكس على كل نص أقدّمه.
-            </p>
-            <p>
-                أقدّم خدمات كتابة وصياغة تعتمد على الذكاء الاصطناعي بروح إنسانية هادئة ومتوازنة، تناسب من يبحث عن نص محترم وواضح دون تعقيد.
-            </p>
-            <div class="hero-buttons">
-                <a href="#order" class="btn btn-primary">اطلب خدمة الآن</a>
-                <a href="#contact" class="btn btn-secondary">تواصل معي</a>
-            </div>
-        </div>
-    </section>
+    <h2 class="section-title mountain" data-key="title1"></h2>
+    <p data-key="text1"></p>
 
-    <section id="about">
-        <h2>من أنا</h2>
-        <p>
-            أنا عبدالإله عامل، أعيش في بلدة Vergato في منطقة Emilia Romagna بإيطاليا، وهي بلدة هادئة تقع بين الجبال والأشجار، يعبرها وادٍ جميل اسمه Reno. هذا المكان هو موقعي بين الطبيعة، حيث أجد في المشي اليومي مساحة للتأمل وتنظيم الأفكار، وأتعلم من الطريق معنى الصبر والانسيابية.
-        </p>
-        <p>
-            أعمل في مجال الكتابة وخدمات الذكاء الاصطناعي، وأقدّم حلولًا تساعد الأشخاص على التعبير بوضوح وصياغة أفكارهم بشكل محترم ومنسّق، سواء كانت وثائق رسمية، محتوى رقمي، تلخيصات، أو نصوص تحتاج إلى عناية خاصة. أتعامل مع كل نص كأنه خطوة في طريق طويل، وأراجع العمل بهدوء حتى يصل إلى شكله المتوازن.
-        </p>
-        <p>
-            اخترت هذا المجال لأنني أحب أن أكون جسرًا بين الناس والتقنية. كثيرون يشعرون أن الذكاء الاصطناعي معقّد أو بعيد عنهم، بينما يمكن أن يكون أداة بسيطة ونافعة إذا وُجّه بشكل صحيح. هدفي أن أقدّم خدمة واضحة، عملية، وإنسانية، تساعد كل شخص على إنجاز ما يحتاجه دون تعقيد.
-        </p>
-    </section>
+    <h2 class="section-title forest" data-key="title2"></h2>
+    <p data-key="text2"></p>
 
-    <section id="services">
-        <h2>الخدمات</h2>
-        <p>
-            أقدّم خدمات كتابة وصياغة تعتمد على الذكاء الاصطناعي، مكتوبة بروح هادئة ومتوازنة، وبأسلوب يحترم التفاصيل كما يحترم الإنسان.
-        </p>
-        <ul>
-            <li><strong>كتابة المحتوى:</strong> نصوص للمواقع، المقالات، الصفحات التعريفية، والمحتوى الإعلاني والإنساني.</li>
-            <li><strong>تلخيص النصوص:</strong> تحويل النصوص الطويلة إلى ملخصات دقيقة وواضحة دون فقدان المعنى.</li>
-            <li><strong>صياغة الوثائق الرسمية:</strong> طلبات، شكايات، رسائل إدارية، ووثائق محترمة للإدارات.</li>
-            <li><strong>إعداد ملفات PDF:</strong> تنسيق النصوص وتحويلها إلى ملفات جاهزة للطباعة أو الإرسال.</li>
-            <li><strong>تحسين النصوص وإعادة صياغتها:</strong> تنظيف لغوي، ترتيب أفكار، وصياغة أكثر وضوحًا واحترافية.</li>
-            <li><strong>محتوى السوشيال ميديا:</strong> منشورات هادئة ومتوازنة تحمل لمسة إنسانية.</li>
-            <li><strong>مساعدات تقنية في الذكاء الاصطناعي:</strong> توجيه بسيط لاستخدام الأدوات دون تعقيد.</li>
-        </ul>
-        <p>
-            أقرأ النص بهدوء، أرتّب أفكاره، ثم أبدأ في صياغته خطوة بخطوة، بانسيابية تشبه حركة الماء وسط الجبال.
-        </p>
-    </section>
+    <h2 class="section-title water" data-key="title3"></h2>
+    <p data-key="text3"></p>
 
-    <section id="ai">
-        <h2>لماذا الذكاء الاصطناعي؟</h2>
-        <p>
-            أرى الذكاء الاصطناعي كأداة تساعد الإنسان على ترتيب أفكاره وتبسيط مهامه، لا كبديل عنه. التكامل بين الإنسان والذكاء الاصطناعي يشبه الماء وسط الجبال: يتحرك بانسيابية، ينساب بهدوء، ويجد طريقه دائمًا مهما كانت الصخور حوله.
-        </p>
-        <p>
-            الإنسان يأتي بالفكرة، والذكاء الاصطناعي يرتّبها.  
-            الإنسان يعيش التجربة، والذكاء الاصطناعي يصيغها.  
-            الإنسان يشعر، والذكاء الاصطناعي يقدّم الشكل الواضح.
-        </p>
-        <p>
-            بهذا التكامل، يصبح العمل أكثر توازنًا، ويصبح النص أكثر وضوحًا، وتصبح الخدمة أكثر إنسانية.
-        </p>
-    </section>
+    <h2 class="section-title sun" data-key="title4"></h2>
+    <p data-key="text4"></p>
 
-    <section id="order">
-        <h2>اطلب خدمة الآن</h2>
-        <p>
-            إذا كنت تحتاج إلى نص واضح، وثيقة رسمية محترمة، تلخيص دقيق، أو محتوى مكتوب بروح هادئة ومتوازنة، يمكنك طلب خدمتك الآن بخطوات بسيطة:
-        </p>
-        <ul>
-            <li><strong>1)</strong> أرسل طلبك عبر البريد أو الواتساب.</li>
-            <li><strong>2)</strong> أخبرني بنوع النص، الهدف منه، وأي تفاصيل مهمة.</li>
-            <li><strong>3)</strong> أقرأ طلبك بهدوء، أرتّب الأفكار، ثم أبدأ العمل خطوة بخطوة.</li>
-            <li><strong>4)</strong> تستلم عملك بصياغة متقنة، واضحة، ومحترمة.</li>
-        </ul>
-        <p>
-            أؤمن أن الخدمة ليست مجرد نص، بل علاقة عمل مبنية على الثقة، الصدق، والاحترام.
-        </p>
-    </section>
+    <h2 class="section-title earth" data-key="title5"></h2>
+    <p data-key="text5"></p>
 
-    <section id="contact">
-        <h2>التواصل</h2>
-        <p>يمكنك التواصل معي عبر:</p>
-        <p><strong>البريد الإلكتروني:</strong><br>
-            amil59@outlook.it<br>
-            Abdelillahamil1959@gmail.com
-        </p>
-        <p><strong>الهاتف (للمكالمات فقط):</strong><br>
-            +39 347 434 8837
-        </p>
-        <p><strong>واتساب (رقم فرنسي):</strong><br>
-            +33 7 80 70 99 30
-        </p>
-        <p><strong>العنوان:</strong><br>
-            Vergato – Emilia Romagna – Italy
-        </p>
-    </section>
+    <h2 class="section-title cloud" data-key="title6"></h2>
+    <p data-key="text6"></p>
 
 </main>
 
-<footer>
-    <p>Abdelillah Amil – Writing & AI Services</p>
-    <p>Vergato – Emilia Romagna – Italy</p>
-    <p>amil59@outlook.it – Abdelillahamil1959@gmail.com – WhatsApp: +33 7 80 70 99 30</p>
-    <p>مكتوب من Vergato… بين الجبال، الأشجار، ووادي Reno.</p>
-</footer>
+<script>
+const content = {
+    ar: {
+        home: "الرئيسية",
+        about: "من أنا",
+        services: "الخدمات",
+        why: "لماذا الذكاء الاصطناعي؟",
+        order: "اطلب خدمة",
+        contact: "التواصل",
+
+        title1: "بين الجبال والأشجار ووادي رينو",
+        text1: "أكتب نصوصًا تحمل هدوء الطبيعة وروح الإنسان.",
+
+        title2: "من أنا",
+        text2: "اسمي عبدالإله أميل، أساعدك في الكتابة والتحليل.",
+
+        title3: "الخدمات",
+        text3: "كتابة – تلخيص – تحسين نصوص – محتوى سوشيال – ذكاء اصطناعي.",
+
+        title4: "لماذا الذكاء الاصطناعي؟",
+        text4: "لأنه يساعدك على إنجاز العمل بسرعة ودقة وهدوء.",
+
+        title5: "اطلب خدمة الآن",
+        text5: "تواصل معي للحصول على خدمة مخصصة تناسب احتياجك.",
+
+        title6: "التواصل",
+        text6: "البريد: amil59@outlook.it – الهاتف: +39 347 434 8837"
+    },
+
+    en: {
+        home: "Home",
+        about: "About",
+        services: "Services",
+        why: "Why AI?",
+        order: "Order",
+        contact: "Contact",
+
+        title1: "Between the mountains, trees, and Reno Valley",
+        text1: "I write calm, human-centered texts inspired by nature.",
+
+        title2: "About Me",
+        text2: "My name is Abdelillah Amil. I help you write and analyze.",
+
+        title3: "Services",
+        text3: "Writing – Summaries – Text improvement – Social content – AI help.",
+
+        title4: "Why AI?",
+        text4: "Because it helps you work faster, more accurately, and calmly.",
+
+        title5: "Order a Service",
+        text5: "Contact me to get a personalized service.",
+
+        title6: "Contact",
+        text6: "Email: amil59@outlook.it – Phone: +39 347 434 8837"
+    }
+};
+
+function setLang(lang) {
+    document.querySelectorAll("[data-key]").forEach(el => {
+        el.textContent = content[lang][el.dataset.key];
+    });
+}
+setLang("ar");
+</script>
 
 </body>
 </html>
