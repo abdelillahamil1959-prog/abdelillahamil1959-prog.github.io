@@ -1,235 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>عامل عبدالاله – خدمات الكتابة والذكاء الاصطناعي</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خدمات الذكاء الاصطناعي</title>
 
 <style>
     body {
         margin: 0;
-        font-family: "Cairo", sans-serif;
-        background-color: #f7f7f3;
-        color: #222;
-        line-height: 1.8;
-        transition: all 0.3s ease;
+        font-family: "Tahoma";
+        background-color: #f5f5f5;
+        direction: rtl;
     }
 
-    :root {
-        --olive-dark: #4b5a33;
-        --olive-light: #8a9b66;
-        --mountain: #6e7f5f;
-        --forest: #4f6b3a;
-        --water: #7aa6c2;
-        --sun: #d8b45b;
-        --earth: #b08f6a;
-        --cloud: #d9d9d9;
+    /* صورة الهيدر */
+    .hero img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        display: block;
+        border-bottom: 4px solid #ddd;
     }
 
-    header {
-        background-color: #ffffff;
-        border-bottom: 1px solid #ddd;
-        padding: 16px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    /* الشعار */
+    .logo {
+        text-align: center;
+        padding: 25px 0 10px 0;
+    }
+    .logo img {
+        width: 140px;
+        opacity: 0.85;
     }
 
-    .btn-ar {
-        background-color: var(--olive-dark);
-        color: #fff;
-        padding: 6px 14px;
-        border-radius: 50px;
-        font-weight: bold;
-        cursor: pointer;
+    /* الأزرار */
+    .buttons {
+        text-align: center;
+        margin: 20px 0;
     }
-
-    .btn-en {
-        background-color: var(--olive-light);
-        color: #fff;
-        padding: 6px 14px;
-        border-radius: 6px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    nav {
-        display: flex;
-        gap: 12px;
-    }
-
-    .nav-hilal {
-        padding: 6px 14px;
-        background-color: var(--forest);
-        color: #fff;
-        border-radius: 40px 10px;
-    }
-
-    .nav-shams {
-        padding: 6px 14px;
-        background-color: var(--sun);
-        color: #fff;
-        border-radius: 50%;
-    }
-
-    .nav-murabba {
-        padding: 6px 14px;
-        background-color: var(--earth);
-        color: #fff;
-        border-radius: 4px;
-    }
-
-    .nav-daera {
-        padding: 6px 14px;
-        background-color: var(--water);
-        color: #fff;
-        border-radius: 50px;
-    }
-
-    .nav-mustatil {
-        padding: 6px 20px;
-        background-color: var(--mountain);
-        color: #fff;
-        border-radius: 8px;
-    }
-
-    .nav-hada {
-        padding: 6px 14px;
-        background-color: var(--cloud);
-        color: #333;
-        border-radius: 0px;
-    }
-
-    main {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 24px 16px 80px;
-    }
-
-    .section-title {
-        padding: 10px 16px;
-        border-radius: 8px;
-        color: #fff;
-        margin-bottom: 12px;
+    .buttons a {
         display: inline-block;
+        background-color: #4a4a4a;
+        color: white;
+        padding: 12px 22px;
+        margin: 6px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: 0.3s;
+    }
+    .buttons a:hover {
+        background-color: #6a6a6a;
+        transform: translateY(-2px);
     }
 
-    .mountain { background-color: var(--mountain); }
-    .forest { background-color: var(--forest); }
-    .water { background-color: var(--water); }
-    .sun { background-color: var(--sun); }
-    .earth { background-color: var(--earth); }
-    .cloud { background-color: var(--cloud); color: #333; }
+    /* الأقسام */
+    .section {
+        background: white;
+        margin: 20px auto;
+        padding: 20px;
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ddd;
+        font-size: 18px;
+        line-height: 1.7;
+        transition: 0.3s;
+    }
+    .section:hover {
+        box-shadow: 0 0 14px #ccc;
+    }
 
+    .section h3 {
+        margin-top: 0;
+        color: #333;
+        font-size: 22px;
+    }
+
+    /* زر الواتساب */
+    .whatsapp {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #25D366;
+        color: white;
+        padding: 14px 20px;
+        border-radius: 50px;
+        font-size: 18px;
+        text-decoration: none;
+        box-shadow: 0 0 10px #999;
+    }
 </style>
 </head>
 
 <body>
 
-<header>
-    <div id="brand">عامل عبدالاله</div>
+<!-- صورة الهيدر -->
+<div class="hero">
+    <img src="https://raw.githubusercontent.com/abdelillahamil1959-prog/abdelillahamil1959-prog.github.io/main/photo.jpg" alt="header">
+</div>
 
-    <nav>
-        <div class="nav-hilal" data-key="home"></div>
-        <div class="nav-shams" data-key="about"></div>
-        <div class="nav-murabba" data-key="services"></div>
-        <div class="nav-daera" data-key="why"></div>
-        <div class="nav-mustatil" data-key="order"></div>
-        <div class="nav-hada" data-key="contact"></div>
-    </nav>
+<!-- الشعار -->
+<div class="logo">
+    <img src="lmImagine.png" alt="logo">
+</div>
 
-    <div>
-        <button class="btn-ar" onclick="setLang('ar')">العربية</button>
-        <button class="btn-en" onclick="setLang('en')">English</button>
-    </div>
-</header>
+<!-- الأزرار -->
+<div class="buttons">
+    <a href="#writing">الكتابة</a>
+    <a href="#analysis">التحليل</a>
+    <a href="#images">الصور</a>
+    <a href="#learning">التعلم</a>
+    <a href="#consulting">الاستشارة</a>
+    <a href="#contact">التواصل</a>
+</div>
 
-<main>
+<!-- الأقسام -->
+<div id="writing" class="section">
+    <h3>الكتابة</h3>
+    <p>خدمات كتابة احترافية باستخدام الذكاء الاصطناعي: مقالات، نصوص، رسائل، محتوى تسويقي، تحسين الأسلوب، إعادة الصياغة.</p>
+</div>
 
-    <h2 class="section-title mountain" data-key="title1"></h2>
-    <p data-key="text1"></p>
+<div id="analysis" class="section">
+    <h3>التحليل</h3>
+    <p>تحليل بيانات، استخراج أفكار، تلخيص، مقارنة، بناء تقارير، فهم الاتجاهات.</p>
+</div>
 
-    <h2 class="section-title forest" data-key="title2"></h2>
-    <p data-key="text2"></p>
+<div id="images" class="section">
+    <h3>الصور</h3>
+    <p>تعديل الصور، إزالة العناصر، تحسين الجودة، تكبير الإطار، إبراز الحركة، إنشاء صور جديدة.</p>
+</div>
 
-    <h2 class="section-title water" data-key="title3"></h2>
-    <p data-key="text3"></p>
+<div id="learning" class="section">
+    <h3>التعلم</h3>
+    <p>شرح مفاهيم الذكاء الاصطناعي، تعليم استخدام الأدوات، بناء مهارات الربح من الذكاء الاصطناعي.</p>
+</div>
 
-    <h2 class="section-title sun" data-key="title4"></h2>
-    <p data-key="text4"></p>
+<div id="consulting" class="section">
+    <h3>الاستشارة</h3>
+    <p>توجيهات عملية، خطوات واضحة، مساعدات تقنية، حلول للمشاكل.</p>
+</div>
 
-    <h2 class="section-title earth" data-key="title5"></h2>
-    <p data-key="text5"></p>
+<div id="contact" class="section">
+    <h3>التواصل</h3>
+    <p>للتواصل المباشر عبر الواتساب.</p>
+</div>
 
-    <h2 class="section-title cloud" data-key="title6"></h2>
-    <p data-key="text6"></p>
-
-</main>
-
-<script>
-const content = {
-    ar: {
-        home: "الرئيسية",
-        about: "من أنا",
-        services: "الخدمات",
-        why: "لماذا الذكاء الاصطناعي؟",
-        order: "اطلب خدمة",
-        contact: "التواصل",
-
-        title1: "بين الجبال والأشجار ووادي رينو",
-        text1: "بين الجبال والأشجار ووادي رينو، تعلّمت أن الطريق ليس مجرد مسافة، بل حالة من الصفاء. هناك، حيث الهواء يمشي قبلك، وحيث الخطوات تصبح أفكارًا، اكتشفت أن الكتابة تشبه المشي تمامًا. لا تُكتب دفعة واحدة، ولا تُنتزع بالقوة، بل تنمو بهدوء، كلمة بعد كلمة، كما تنمو شجرة صغيرة في مكانها الصحيح. كل نصّ أكتبه يبدأ من إحساس، من لحظة صادقة، من فكرة تمشي معي قبل أن تمشي على الورق. وهذا ما أقدّمه لك: كتابة تحمل روح الطريق، وهدوء الطبيعة، وصدق الإنسان.",
-
-        title2: "من أنا",
-        text2: "أنا عامل عبدالاله، كاتب هادئ أؤمن أن الكلمة مثل خطوة على طريق طويل؛ لا تُقال بسرعة، ولا تُكتب بعجلة، بل تُترك لتنمو في مكانها الصحيح. أكتب كما أمشي: بهدوء، بانسيابية، وبإحساس أن كل نصّ يجب أن يحمل شيئًا من الطبيعة، شيئًا من الصدق، وشيئًا من الإنسان. أساعدك في تحويل فكرتك إلى نصّ واضح، جميل، ومتوازن… نصّ يمشي بسلاسة، ويصل إلى القارئ دون ضوضاء.",
-
-        title3: "الخدمات",
-        text3: "أقدّم خدمات كتابة وتحليل وتحسين نصوص بأسلوب هادئ وواضح، يعتمد على الفهم الحقيقي للفكرة قبل صياغتها. أعمل على كتابة المحتوى، تلخيصه، إعادة ترتيبه، وتنقيته من الضوضاء، ليصل إلى القارئ بشكل نظيف ومتوازن. كما أستخدم الذكاء الاصطناعي كأداة تساعدني على تقديم نتائج دقيقة وسريعة دون التأثير على جودة النص. هدفي أن تحصل على نصّ واضح، منسّق، ومناسب تمامًا للغرض الذي تريده، سواء كان محتوى تسويقيًا، تعليميًا، شخصيًا، أو مهنيًا.",
-
-        title4: "لماذا الذكاء الاصطناعي؟",
-        text4: "أستخدم الذكاء الاصطناعي كأداة تساعدني على العمل بدقة وسرعة، لكنني لا أعتمد عليه وحده، ولا أتركه يكتب بدلًا عني. الذكاء الاصطناعي يمنحني قدرة أكبر على تحليل النصوص، ترتيب الأفكار، واستخراج المعنى الحقيقي من المحتوى، بينما تبقى اللمسة الإنسانية هي الأساس في كل ما أقدّمه. بهذه الطريقة، يجتمع هدوء الكتابة مع قوة التقنية، ويظهر تناغم طبيعي بين الإنسان والذكاء الاصطناعي يمنح العمل سرعة في التنفيذ، ودقة في النتائج، وإبداعًا في الصياغة.",
-
-        title5: "اطلب خدمة",
-        text5: "إذا كان لديك فكرة تريد صياغتها، نصّ يحتاج إلى تحسين، أو محتوى ترغب في ترتيبه وتنقيته، يمكنك طلب الخدمة بسهولة وبشكل مباشر. أعمل على فهم الهدف أولًا، ثم أقدّم لك نصًا واضحًا، متوازنًا، ومناسبًا تمامًا لما تحتاجه. سواء كان العمل بسيطًا أو طويلًا، سريعًا أو يحتاج وقتًا، سأتعامل معه بهدوء، ودقة، وتناغم بين الخبرة والذكاء الاصطناعي، لتحصل في النهاية على نتيجة نظيفة وجاهزة للاستخدام.",
-
-        title6: "التواصل",
-        text6: "يمكنك التواصل معي بسهولة عبر البريد الإلكتروني أو الواتساب، سواء كان لديك سؤال، فكرة تريد مناقشتها، أو نصّ يحتاج إلى تحسين. أتعامل مع كل رسالة بهدوء واهتمام، وأحرص على فهم ما تحتاجه قبل البدء في العمل. التواصل المباشر يساعدني على تقديم خدمة دقيقة وواضحة، ويضمن أن يصل العمل إليك بالشكل الذي تتوقعه تمامًا.\n\nالبريد الإلكتروني: amil59@outlook.it\nواتساب: +33 780709930"
-    },
-
-    en: {
-        home: "Home",
-        about: "About Me",
-        services: "Services",
-        why: "Why AI?",
-        order: "Request a Service",
-        contact: "Contact",
-
-        title1: "Between the Mountains, Trees, and the Reno Valley",
-        text1: "Between the mountains, the trees, and the Reno Valley, I learned that a path is not just distance—it is a state of clarity. There, where the air walks before you and steps turn into thoughts, I discovered that writing is exactly like walking. It doesn’t happen all at once, nor does it come by force; it grows quietly, word by word, like a small tree finding its place. Every text I write begins with a feeling, a sincere moment, an idea that walks with me before it walks onto the page. This is what I offer you: writing that carries the spirit of the path, the calm of nature, and the honesty of human experience.",
-
-        title2: "Who I Am",
-        text2: "My name is Abdelillah Amil, a calm writer who believes that every word is a step on a long path. Writing, for me, is never rushed—it grows quietly, finding its natural place. I write the way I walk: smoothly, mindfully, and with a sense of balance. I help you turn your ideas into clear, natural text that reaches the reader without noise.",
-
-        title3: "Services",
-        text3: "I offer writing, analysis, and text‑refinement services with a calm and clear approach that focuses on understanding your idea before shaping it. I work on creating content, summarizing it, reorganizing it, and removing unnecessary noise so it reaches the reader cleanly and smoothly. I also use AI as a supportive tool to deliver precise and fast results without compromising the quality of the text. My goal is to provide you with clear, well‑structured writing that fits your purpose—whether it is marketing content, educational material, personal writing, or professional communication.",
-
-        title4: "Why Artificial Intelligence?",
-        text4: "I use AI as a supportive tool that helps me work with precision and speed, but I never rely on it alone, nor do I let it replace the human touch. AI allows me to analyze text, organize ideas, and extract the true meaning behind content, while the human element remains at the core of everything I deliver. This balance brings together calm writing and strong technology, creating a natural harmony between human insight and AI that brings speed, accuracy, and creativity to the final result.",
-
-        title5: "Request a Service",
-        text5: "If you have an idea that needs shaping, a text that requires improvement, or content you want organized and refined, you can request a service easily and directly. I start by understanding your goal, then deliver clear, balanced writing that fits exactly what you need. Whether the task is simple or detailed, fast or time‑consuming, I approach it with calm, precision, and a natural harmony between human skill and AI, so you receive a clean, ready‑to‑use result.",
-
-        title6: "Contact",
-        text6: "You can reach me easily through email or WhatsApp, whether you have a question, an idea to discuss, or a text that needs refinement. I handle every message with calm attention, making sure I understand your needs before starting the work. Direct communication helps me deliver precise, clear results and ensures the final text matches exactly what you expect.\n\nEmail: amil59@outlook.it\nWhatsApp: +33 780709930"
-    }
-};
-
-function setLang(lang) {
-    document.querySelectorAll("[data-key]").forEach(el => {
-        el.innerText = content[lang][el.getAttribute("data-key")];
-    });
-}
-</script>
+<!-- زر الواتساب -->
+<a class="whatsapp" href="https://wa.me/212000000000">تواصل عبر واتساب</a>
 
 </body>
 </html>
