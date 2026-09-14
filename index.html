@@ -1,109 +1,271 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <title>خدمات الكتابة والتحليل بالذكاء الاصطناعي</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Abdelillah Amil – Writing & AI Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: 'Cairo', sans-serif; background:#f7f7f7; margin:0; direction:rtl; }
-        h2 { color:#556b2f; }
-        p { font-size:18px; }
+        body {
+            margin: 0;
+            font-family: "Noto Sans Arabic", system-ui, sans-serif;
+            background-color: #f7f7f3;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        :root {
+            --olive: #6b7b4d;
+            --olive-dark: #4b5a33;
+            --light-bg: #f7f7f3;
+            --soft-border: #ddd;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--soft-border);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .brand {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--olive-dark);
+        }
+
+        .brand-sub {
+            font-size: 12px;
+            color: #777;
+        }
+
+        nav a {
+            margin-left: 12px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--olive-dark);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 16px 80px;
+        }
+
+        section {
+            margin-bottom: 56px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h1, h2 {
+            color: var(--olive-dark);
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p {
+            margin: 8px 0;
+        }
+
+        .hero {
+            background-color: #f0f2ea;
+            border: 1px solid #e0e3d5;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            margin-top: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-right: 8px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background-color: var(--olive-dark);
+            color: #fff;
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--olive-dark);
+            color: var(--olive-dark);
+            background-color: #fff;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: var(--olive-dark);
+            color: #fff;
+            padding: 16px 24px;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 8px;
+            }
+        }
     </style>
 </head>
-
 <body>
 
-<div style="text-align:center; padding:15px;">
-    <a href="index.html"
-       style="padding:8px 15px; background:#e8e8e8; border-radius:6px; margin:0 10px; color:#556b2f; text-decoration:none;">
-       العربية
-    </a>
-
-    <a href="index-en.html"
-       style="padding:8px 15px; background:#e8e8e8; border-radius:6px; margin:0 10px; color:#556b2f; text-decoration:none;">
-       English
-    </a>
-</div>
-
-<img src="Immagine.png" alt="صورة الموقع"
-     style="width:100%; max-height:450px; object-fit:cover;">
-
-<section style="padding:20px; text-align:center;">
-    <h2>الخدمات المتاحة</h2>
-    <p>• كتابة المقالات</p>
-    <p>• تلخيص النصوص</p>
-    <p>• إعادة الصياغة</p>
-    <p>• تحليل النصوص والتقارير</p>
-    <p>• كتابة الرسائل الرسمية</p>
-</section>
-
-<section style="padding:20px; text-align:center;">
-    <h2>الأسعار</h2>
-    <p>كتابة مقال: 5</p>
-    <p>تلخيص نص: 3</p>
-    <p>إعادة صياغة: 3</p>
-    <p>تحرير نص: 5</p>
-    <p>رسالة بسيطة: 4</p>
-</section>
-
-<section style="padding:20px; text-align:center;">
-    <h2>التواصل</h2>
-    <p>لطلب خدمة، يرجى التواصل عبر واتساب.</p>
-
-    <div style="text-align:center; margin-top:20px;">
-        <a href="https://wa.me/33780709930"
-           style="padding:12px 25px; background:#25D366; color:white; border-radius:8px; text-decoration:none; font-size:18px;">
-           تواصل عبر واتساب
-        </a>
+<header>
+    <div>
+        <div class="brand">Abdelillah Amil</div>
+        <div class="brand-sub">Writing & AI Services – Vergato, Emilia Romagna, Italy</div>
     </div>
-</section>
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#about">من أنا</a>
+        <a href="#services">الخدمات</a>
+        <a href="#ai">لماذا الذكاء الاصطناعي؟</a>
+        <a href="#order">اطلب خدمة</a>
+        <a href="#contact">التواصل</a>
+    </nav>
+</header>
 
-<section style="padding:20px; text-align:center;">
-    <h2>نبذة عني</h2>
-    <p>أنا عبدالإله، أقدم خدمات كتابة وتحليل نصوص باستخدام الذكاء الاصطناعي بجودة عالية وسرعة في الإنجاز.</p>
-</section>
+<main>
 
-<section style="padding:20px; text-align:center;">
-    <h2>لماذا تختار خدماتي؟</h2>
-    <p>• سرعة في الإنجاز دون التأثير على الجودة</p>
-    <p>• أسعار مناسبة وواضحة</p>
-    <p>• خبرة في الذكاء الاصطناعي</p>
-    <p>• تعامل محترم وواضح</p>
-    <p>• تسليم منسّق وجاهز للاستخدام</p>
-</section>
+    <section id="home">
+        <div class="hero">
+            <h1>بين الجبال، الأشجار، ووادي Reno…</h1>
+            <p>
+                أكتب نصوصًا تحمل هدوء الطبيعة وروح الإنسان.  
+                أنا عبدالإله عامل، أعمل من بلدة Vergato في Emilia Romagna بإيطاليا، حيث تمنحني الطبيعة تركيزًا ووضوحًا ينعكس على كل نص أقدّمه.
+            </p>
+            <p>
+                أقدّم خدمات كتابة وصياغة تعتمد على الذكاء الاصطناعي بروح إنسانية هادئة ومتوازنة، تناسب من يبحث عن نص محترم وواضح دون تعقيد.
+            </p>
+            <div class="hero-buttons">
+                <a href="#order" class="btn btn-primary">اطلب خدمة الآن</a>
+                <a href="#contact" class="btn btn-secondary">تواصل معي</a>
+            </div>
+        </div>
+    </section>
 
-<section style="padding:20px; text-align:center;">
-    <h2>آراء العملاء</h2>
-    <p>“خدمة ممتازة وسريعة جدًا، أنصح بها.”</p>
-    <p>“أسلوب كتابة احترافي، وفهم دقيق للطلب.”</p>
-    <p>“تعامل راقٍ ونتيجة أفضل مما توقعت.”</p>
-</section>
+    <section id="about">
+        <h2>من أنا</h2>
+        <p>
+            أنا عبدالإله عامل، أعيش في بلدة Vergato في منطقة Emilia Romagna بإيطاليا، وهي بلدة هادئة تقع بين الجبال والأشجار، يعبرها وادٍ جميل اسمه Reno. هذا المكان هو موقعي بين الطبيعة، حيث أجد في المشي اليومي مساحة للتأمل وتنظيم الأفكار، وأتعلم من الطريق معنى الصبر والانسيابية.
+        </p>
+        <p>
+            أعمل في مجال الكتابة وخدمات الذكاء الاصطناعي، وأقدّم حلولًا تساعد الأشخاص على التعبير بوضوح وصياغة أفكارهم بشكل محترم ومنسّق، سواء كانت وثائق رسمية، محتوى رقمي، تلخيصات، أو نصوص تحتاج إلى عناية خاصة. أتعامل مع كل نص كأنه خطوة في طريق طويل، وأراجع العمل بهدوء حتى يصل إلى شكله المتوازن.
+        </p>
+        <p>
+            اخترت هذا المجال لأنني أحب أن أكون جسرًا بين الناس والتقنية. كثيرون يشعرون أن الذكاء الاصطناعي معقّد أو بعيد عنهم، بينما يمكن أن يكون أداة بسيطة ونافعة إذا وُجّه بشكل صحيح. هدفي أن أقدّم خدمة واضحة، عملية، وإنسانية، تساعد كل شخص على إنجاز ما يحتاجه دون تعقيد.
+        </p>
+    </section>
 
-<section style="padding:20px; text-align:center;">
-    <h2>نماذج من الأعمال</h2>
+    <section id="services">
+        <h2>الخدمات</h2>
+        <p>
+            أقدّم خدمات كتابة وصياغة تعتمد على الذكاء الاصطناعي، مكتوبة بروح هادئة ومتوازنة، وبأسلوب يحترم التفاصيل كما يحترم الإنسان.
+        </p>
+        <ul>
+            <li><strong>كتابة المحتوى:</strong> نصوص للمواقع، المقالات، الصفحات التعريفية، والمحتوى الإعلاني والإنساني.</li>
+            <li><strong>تلخيص النصوص:</strong> تحويل النصوص الطويلة إلى ملخصات دقيقة وواضحة دون فقدان المعنى.</li>
+            <li><strong>صياغة الوثائق الرسمية:</strong> طلبات، شكايات، رسائل إدارية، ووثائق محترمة للإدارات.</li>
+            <li><strong>إعداد ملفات PDF:</strong> تنسيق النصوص وتحويلها إلى ملفات جاهزة للطباعة أو الإرسال.</li>
+            <li><strong>تحسين النصوص وإعادة صياغتها:</strong> تنظيف لغوي، ترتيب أفكار، وصياغة أكثر وضوحًا واحترافية.</li>
+            <li><strong>محتوى السوشيال ميديا:</strong> منشورات هادئة ومتوازنة تحمل لمسة إنسانية.</li>
+            <li><strong>مساعدات تقنية في الذكاء الاصطناعي:</strong> توجيه بسيط لاستخدام الأدوات دون تعقيد.</li>
+        </ul>
+        <p>
+            أقرأ النص بهدوء، أرتّب أفكاره، ثم أبدأ في صياغته خطوة بخطوة، بانسيابية تشبه حركة الماء وسط الجبال.
+        </p>
+    </section>
 
-    <h3>إعادة صياغة</h3>
-    <p style="color:#777;">النص الأصلي:</p>
-    <p>“هذا المشروع يحتاج إلى تنظيم أفضل لتحقيق نتائج واضحة.”</p>
+    <section id="ai">
+        <h2>لماذا الذكاء الاصطناعي؟</h2>
+        <p>
+            أرى الذكاء الاصطناعي كأداة تساعد الإنسان على ترتيب أفكاره وتبسيط مهامه، لا كبديل عنه. التكامل بين الإنسان والذكاء الاصطناعي يشبه الماء وسط الجبال: يتحرك بانسيابية، ينساب بهدوء، ويجد طريقه دائمًا مهما كانت الصخور حوله.
+        </p>
+        <p>
+            الإنسان يأتي بالفكرة، والذكاء الاصطناعي يرتّبها.  
+            الإنسان يعيش التجربة، والذكاء الاصطناعي يصيغها.  
+            الإنسان يشعر، والذكاء الاصطناعي يقدّم الشكل الواضح.
+        </p>
+        <p>
+            بهذا التكامل، يصبح العمل أكثر توازنًا، ويصبح النص أكثر وضوحًا، وتصبح الخدمة أكثر إنسانية.
+        </p>
+    </section>
 
-    <p style="color:#777;">بعد إعادة الصياغة:</p>
-    <p>“لتحقيق نتائج دقيقة، يتطلب المشروع ترتيبًا منهجيًا أكثر.”</p>
+    <section id="order">
+        <h2>اطلب خدمة الآن</h2>
+        <p>
+            إذا كنت تحتاج إلى نص واضح، وثيقة رسمية محترمة، تلخيص دقيق، أو محتوى مكتوب بروح هادئة ومتوازنة، يمكنك طلب خدمتك الآن بخطوات بسيطة:
+        </p>
+        <ul>
+            <li><strong>1)</strong> أرسل طلبك عبر البريد أو الواتساب.</li>
+            <li><strong>2)</strong> أخبرني بنوع النص، الهدف منه، وأي تفاصيل مهمة.</li>
+            <li><strong>3)</strong> أقرأ طلبك بهدوء، أرتّب الأفكار، ثم أبدأ العمل خطوة بخطوة.</li>
+            <li><strong>4)</strong> تستلم عملك بصياغة متقنة، واضحة، ومحترمة.</li>
+        </ul>
+        <p>
+            أؤمن أن الخدمة ليست مجرد نص، بل علاقة عمل مبنية على الثقة، الصدق، والاحترام.
+        </p>
+    </section>
 
-    <h3>تلخيص نص</h3>
-    <p style="color:#777;">النص الأصلي:</p>
-    <p>“يتناول هذا المقال أهمية الذكاء الاصطناعي في تطوير الأعمال الحديثة، ودوره في تحسين الإنتاجية وتقليل الأخطاء.”</p>
+    <section id="contact">
+        <h2>التواصل</h2>
+        <p>يمكنك التواصل معي عبر:</p>
+        <p><strong>البريد الإلكتروني:</strong><br>
+            amil59@outlook.it<br>
+            Abdelillahamil1959@gmail.com
+        </p>
+        <p><strong>الهاتف (للمكالمات فقط):</strong><br>
+            +39 347 434 8837
+        </p>
+        <p><strong>واتساب (رقم فرنسي):</strong><br>
+            +33 7 80 70 99 30
+        </p>
+        <p><strong>العنوان:</strong><br>
+            Vergato – Emilia Romagna – Italy
+        </p>
+    </section>
 
-    <p style="color:#777;">الملخص:</p>
-    <p>“الذكاء الاصطناعي يعزز الإنتاجية ويقلل الأخطاء في الأعمال الحديثة.”</p>
+</main>
 
-    <h3>كتابة مقال قصير</h3>
-    <p>“الذكاء الاصطناعي أصبح جزءًا أساسيًا من حياتنا اليومية، فهو يساعد في تحسين جودة العمل، وتسهيل المهام، وتقديم حلول أسرع وأكثر دقة.”</p>
-</section>
-
-<footer style="text-align:center; padding:20px; background:#f0f0f0; margin-top:30px; color:#556b2f;">
-    © 2026 عبدالإله — خدمات الذكاء الاصطناعي
+<footer>
+    <p>Abdelillah Amil – Writing & AI Services</p>
+    <p>Vergato – Emilia Romagna – Italy</p>
+    <p>amil59@outlook.it – Abdelillahamil1959@gmail.com – WhatsApp: +33 7 80 70 99 30</p>
+    <p>مكتوب من Vergato… بين الجبال، الأشجار، ووادي Reno.</p>
 </footer>
 
 </body>
