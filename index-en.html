@@ -3,108 +3,211 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AI Writing & Analysis Services</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Abdelillah Amil – Writing & AI Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: 'Cairo', sans-serif; background:#f7f7f7; margin:0; }
-        h2 { color:#556b2f; }
-        p { font-size:18px; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f3;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        :root {
+            --olive: #6b7b4d;
+            --olive-dark: #4b5a33;
+            --light-bg: #f7f7f3;
+            --soft-border: #ddd;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--soft-border);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .brand {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--olive-dark);
+        }
+
+        .brand-sub {
+            font-size: 12px;
+            color: #777;
+        }
+
+        nav a {
+            margin-left: 12px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--olive-dark);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 16px 80px;
+        }
+
+        section {
+            margin-bottom: 56px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h1, h2 {
+            color: var(--olive-dark);
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p {
+            margin: 8px 0;
+        }
+
+        .hero {
+            background-color: #f0f2ea;
+            border: 1px solid #e0e3d5;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            margin-top: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-right: 8px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background-color: var(--olive-dark);
+            color: #fff;
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--olive-dark);
+            color: var(--olive-dark);
+            background-color: #fff;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: var(--olive-dark);
+            color: #fff;
+            padding: 16px 24px;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                margin-top: 8px;
+            }
+        }
     </style>
 </head>
-
 <body>
 
-<div style="text-align:center; padding:15px;">
-    <a href="index.html"
-       style="padding:8px 15px; background:#e8e8e8; border-radius:6px; margin:0 10px; color:#556b2f; text-decoration:none;">
-       العربية
-    </a>
-
-    <a href="index-en.html"
-       style="padding:8px 15px; background:#e8e8e8; border-radius:6px; margin:0 10px; color:#556b2f; text-decoration:none;">
-       English
-    </a>
-</div>
-
-<img src="Immagine.png" alt="Hero Image"
-     style="width:100%; max-height:450px; object-fit:cover;">
-
-<section style="padding:20px; text-align:center;">
-    <h2>Available Services</h2>
-    <p>• Professional article writing</p>
-    <p>• Text summarization</p>
-    <p>• Rewriting & style improvement</p>
-    <p>• Text analysis & reports</p>
-    <p>• Formal letters</p>
-</section>
-
-<section style="padding:20px; text-align:center;">
-    <h2>Prices</h2>
-    <p>Article writing: 5</p>
-    <p>Text summary: 3</p>
-    <p>Rewriting: 3</p>
-    <p>Text editing: 5</p>
-    <p>Simple letter: 4</p>
-</section>
-
-<section style="padding:20px; text-align:center;">
-    <h2>Contact Me</h2>
-    <p>To request a service, contact me via WhatsApp.</p>
-
-    <div style="text-align:center; margin-top:20px;">
-        <a href="https://wa.me/33780709930"
-           style="padding:12px 25px; background:#25D366; color:white; border-radius:8px; text-decoration:none; font-size:18px;">
-           Contact via WhatsApp
-        </a>
+<header>
+    <div>
+        <div class="brand">Abdelillah Amil</div>
+        <div class="brand-sub">Writing & AI Services – Vergato, Emilia Romagna, Italy</div>
     </div>
-</section>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#ai">Why AI?</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<section style="padding:20px; text-align:center;">
-    <h2>About Me</h2>
-    <p>I am Abdelillah, offering AI-powered writing and text analysis services with high quality and fast delivery.</p>
-</section>
+<main>
 
-<section style="padding:20px; text-align:center;">
-    <h2>Why Choose My Services?</h2>
-    <p>• Fast delivery without compromising quality</p>
-    <p>• Clear and affordable pricing</p>
-    <p>• Experience with AI writing tools</p>
-    <p>• Respectful and transparent communication</p>
-    <p>• Clean and ready-to-use final output</p>
-</section>
+    <!-- Home -->
+    <section id="home">
+        <div class="hero">
+            <h1>Between the mountains, the trees, and the Reno River…</h1>
+            <p>
+                I write texts that carry the calm of nature and the spirit of humanity.  
+                I am Abdelillah Amil, working from the town of Vergato in Emilia Romagna, Italy — a place that gives clarity and focus to every piece of writing I create.
+            </p>
+            <p>
+                I offer writing and AI-assisted content services with a gentle, balanced, and human-centered approach, suitable for anyone seeking clear and respectful text without complexity.
+            </p>
+            <div class="hero-buttons">
+                <a href="#order" class="btn btn-primary">Order a Service</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
 
-<section style="padding:20px; text-align:center;">
-    <h2>Client Reviews</h2>
-    <p>“Excellent and very fast service, highly recommended.”</p>
-    <p>“Professional writing style and accurate understanding.”</p>
-    <p>“Respectful communication and better results than expected.”</p>
-</section>
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            My name is Abdelillah Amil. I live in Vergato, a quiet town in Emilia Romagna, Italy, surrounded by mountains, trees, and the beautiful Reno River. This place is my space for reflection, where daily walking helps me organize thoughts and learn the meaning of patience and flow.
+        </p>
+        <p>
+            I work in writing and AI-based content services. I help people express their ideas clearly and respectfully — whether it’s official documents, digital content, summaries, or texts that need careful attention. I treat every text as a step on a long path, reviewing it calmly until it reaches a balanced and polished form.
+        </p>
+        <p>
+            I chose this field because I enjoy being a bridge between people and technology. Many feel that AI is complicated or distant, but it can be simple and helpful when guided properly. My goal is to provide clear, practical, and human-centered service that helps anyone accomplish what they need without difficulty.
+        </p>
+    </section>
 
-<section style="padding:20px; text-align:center;">
-    <h2>Work Samples</h2>
-
-    <h3>Rewriting</h3>
-    <p style="color:#777;">Original:</p>
-    <p>“This project needs better organization to achieve clear results.”</p>
-
-    <p style="color:#777;">Rewritten:</p>
-    <p>“To achieve precise results, the project requires a more structured approach.”</p>
-
-    <h3>Text Summary</h3>
-    <p style="color:#777;">Original:</p>
-    <p>“This article discusses the importance of AI in modern business development and its role in improving productivity and reducing errors.”</p>
-
-    <p style="color:#777;">Summary:</p>
-    <p>“AI enhances productivity and reduces errors in modern business.”</p>
-
-    <h3>Short Article</h3>
-    <p>“Artificial intelligence has become an essential part of daily life, helping improve work quality, simplify tasks, and provide faster and more accurate solutions.”</p>
-</section>
-
-<footer style="text-align:center; padding:20px; background:#f0f0f0; margin-top:30px; color:#556b2f;">
-    © 2026 Abdelillah — AI Services
-</footer>
-
-</body>
-</html>
+    <!-- Services -->
+    <section id="services">
+        <h2>Services</h2>
+        <p>
+            I offer writing and AI-assisted content services crafted with calmness, balance, and respect for human detail.
+        </p>
+        <ul>
+            <li><strong>Content Writing:</strong> Website text, articles, introductions, and human-centered promotional content.</li>
+            <li><strong>Text Summaries:</strong> Clear and accurate summaries of long texts without losing meaning.</li>
+            <li><strong>Official Documents:</strong> Requests, letters, administrative documents, and respectful formal writing.</li>
+            <li><strong>PDF Preparation:</strong> Formatting and converting text into clean, printable PDF files.</li>
+            <li><strong>Text Improvement:</strong> Editing, restructuring ideas, and producing clearer, more professional writing.</li>
+            <li><strong>Social Media Content:</strong> Calm, balanced posts with a human touch.</li>
+            <li><strong>AI Assistance:</strong> Simple guidance for using AI tools without complexity.</li>
+        </ul>
+        <p>
+            I read the text calmly, organize its ideas, and rewrite it step by step — with flow, like water moving through
