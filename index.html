@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -11,6 +12,19 @@
         font-family: "Tahoma";
         background-color: #f5f5f5;
         direction: rtl;
+    }
+
+    /* زر اللغة */
+    .lang-switch {
+        text-align: left;
+        padding: 10px 20px;
+    }
+    .lang-switch a {
+        margin-left: 10px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 16px;
     }
 
     /* صورة الهيدر */
@@ -93,6 +107,12 @@
 
 <body>
 
+<!-- زر اللغة -->
+<div class="lang-switch">
+    <a href="#">AR</a>
+    <a href="#">EN</a>
+</div>
+
 <!-- صورة الهيدر -->
 <div class="hero">
     <img src="https://raw.githubusercontent.com/abdelillahamil1959-prog/abdelillahamil1959-prog.github.io/main/photo.jpg" alt="header">
@@ -105,6 +125,8 @@
 
 <!-- الأزرار -->
 <div class="buttons">
+    <a href="#about">من أنا</a>
+    <a href="#why">لماذا الذكاء الاصطناعي؟</a>
     <a href="#writing">الكتابة</a>
     <a href="#analysis">التحليل</a>
     <a href="#images">الصور</a>
@@ -113,7 +135,19 @@
     <a href="#contact">التواصل</a>
 </div>
 
-<!-- الأقسام -->
+<!-- من أنا -->
+<div id="about" class="section">
+    <h3>من أنا</h3>
+    <p>أنا عبدالإله، أقدّم خدمات كتابة وتحليل باستخدام الذكاء الاصطناعي بأسلوب هادئ وواضح ومتوازن. أجمع بين خبرتي في ترتيب الأفكار وبين قوة الأدوات الحديثة، لأقدّم محتوى احترافيًا يناسب هدفك بدقة، بدون مبالغة، وبدون تعقيد.</p>
+</div>
+
+<!-- لماذا الذكاء الاصطناعي -->
+<div id="why" class="section">
+    <h3>لماذا الذكاء الاصطناعي؟</h3>
+    <p>أستخدم الذكاء الاصطناعي كأداة تساعدني على العمل بدقة وسرعة، لكنني لا أتركه يكتب بدلًا عني. الذكاء الاصطناعي يمنحني قدرة أكبر على تحليل النصوص، ترتيب الأفكار، واستخراج المعنى الحقيقي من المحتوى، بينما تبقى اللمسة الإنسانية هي الأساس في كل ما أقدّمه.</p>
+</div>
+
+<!-- الأقسام الأخرى -->
 <div id="writing" class="section">
     <h3>الكتابة</h3>
     <p>خدمات كتابة احترافية باستخدام الذكاء الاصطناعي: مقالات، نصوص، رسائل، محتوى تسويقي، تحسين الأسلوب، إعادة الصياغة.</p>
@@ -141,7 +175,8 @@
 
 <div id="contact" class="section">
     <h3>التواصل</h3>
-    <p>للتواصل المباشر عبر الواتساب.</p>
+    <p>للتواصل عبر الإيميل: <strong>amil59@outlook.it</strong></p>
+    <p>أو عبر الواتساب مباشرة.</p>
 </div>
 
 <!-- زر الواتساب -->
