@@ -5,44 +5,91 @@
     <meta charset="UTF-8">
     <title>خدمات الذكاء الاصطناعي</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
         body {
             margin: 0;
             font-family: Tahoma;
             background-color: #F5F5F5;
+            color: #222;
         }
+
         .page {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            padding: 20px;
+            padding: 20px 16px 40px;
         }
-        h1 {
-            margin-bottom: 20px;
+
+        .lang-switch {
+            display: flex;
+            gap: 12px;
+            padding: 10px 0 20px;
         }
-        a {
+
+        .lang-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
             text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
         }
-        ul {
-            list-style: none;
-            padding: 0;
+
+        .ar-btn { background-color: #6B7A3A; }
+        .en-btn { background-color: #4A90E2; }
+
+        .hero-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
-        li {
-            margin: 8px 0;
+
+        .services {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .service-box {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+            transition: 0.2s;
+        }
+
+        .service-box:hover {
+            background: #e9e9e9;
         }
     </style>
 </head>
+
 <body>
 <div class="page">
-    <h1>الصفحة الرئيسية العربية</h1>
 
-    <p><a href="english.html">الانتقال إلى النسخة الإنجليزية</a></p>
+    <div class="lang-switch">
+        <a href="index.html" class="lang-btn ar-btn">AR</a>
+        <a href="english.html" class="lang-btn en-btn">EN</a>
+    </div>
 
-    <ul>
-        <li><a href="about.html">من أنا</a></li>
-        <li><a href="analysis.html">تحليل النصوص</a></li>
-        <li><a href="images.html">تحليل الصور</a></li>
-        <li><a href="writing.html">كتابة المحتوى</a></li>
-    </ul>
+    <h1 class="hero-title">خدمات الذكاء الاصطناعي</h1>
+
+    <div class="services">
+        <a href="about.html" class="service-box">من أنا</a>
+        <a href="analysis.html" class="service-box">تحليل النصوص</a>
+        <a href="images.html" class="service-box">تحليل الصور</a>
+        <a href="writing.html" class="service-box">كتابة المحتوى</a>
+    </div>
+
 </div>
 </body>
 </html>
