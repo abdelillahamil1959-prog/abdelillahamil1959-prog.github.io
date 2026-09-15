@@ -5,71 +5,31 @@
     <meta charset="UTF-8">
     <title>AI Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Tahoma;
-            background-color: #F5F5F5;
-            color: #222;
-        }
+        body { margin:0; font-family:'Cairo', sans-serif; background:#F7F7F7; color:#222; }
+        .page { max-width:900px; margin:auto; padding:30px 16px; }
 
-        .page {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px 16px 40px;
-        }
-
-        .lang-switch {
-            display: flex;
-            gap: 12px;
-            padding: 10px 0 20px;
-        }
-
+        .lang-switch { display:flex; gap:12px; margin-bottom:25px; }
         .lang-btn {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-            font-size: 17px;
-            font-weight: bold;
+            width:48px; height:48px; border-radius:50%;
+            display:flex; justify-content:center; align-items:center;
+            color:white; text-decoration:none; font-size:17px; font-weight:bold;
         }
+        .ar-btn { background:#6B7A3A; }
+        .en-btn { background:#4A90E2; }
 
-        .ar-btn { background-color: #6B7A3A; }
-        .en-btn { background-color: #4A90E2; }
-
-        .hero-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .services {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 25px;
-        }
+        .hero-title { font-size:32px; font-weight:700; margin-bottom:10px; }
+        .services { display:flex; flex-direction:column; gap:18px; align-items:center; }
 
         .service-box {
-            background: white;
-            padding: 18px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            color: #333;
-            border: 1px solid #ddd;
-            transition: 0.2s;
+            width:70%; background:white; padding:18px; border-radius:12px;
+            font-size:20px; font-weight:600; text-decoration:none; color:#333;
+            border:1px solid #ddd; box-shadow:0 2px 6px rgba(0,0,0,0.05);
+            text-align:center; transition:0.2s;
         }
-
-        .service-box:hover {
-            background: #e9e9e9;
-        }
+        .service-box:hover { background:#EFEFEF; }
     </style>
 </head>
 
