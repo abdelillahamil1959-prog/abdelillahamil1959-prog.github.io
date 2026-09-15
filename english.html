@@ -2,35 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>AI Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Services</title>
 
-    <style>
-        body { margin:0; font-family:'Cairo', sans-serif; background:#F7F7F7; color:#222; }
-        .page { max-width:900px; margin:auto; padding:30px 16px; }
+<style>
+body { margin:0; font-family:'Cairo', sans-serif; background:#F7F7F7; }
+.page { max-width:900px; margin:auto; padding:30px 16px; }
 
-        .lang-switch { display:flex; gap:12px; margin-bottom:25px; }
-        .lang-btn {
-            width:48px; height:48px; border-radius:50%;
-            display:flex; justify-content:center; align-items:center;
-            color:white; text-decoration:none; font-size:17px; font-weight:bold;
-        }
-        .ar-btn { background:#6B7A3A; }
-        .en-btn { background:#4A90E2; }
+.lang-switch { display:flex; gap:12px; justify-content:flex-end; margin-bottom:25px; }
+.lang-btn {
+    width:48px; height:48px; border-radius:50%;
+    display:flex; justify-content:center; align-items:center;
+    color:white; text-decoration:none; font-size:17px; font-weight:bold;
+}
+.ar-btn { background:#6B7A3A; }
+.en-btn { background:#4A9E02; }
 
-        .hero-title { font-size:32px; font-weight:700; margin-bottom:10px; }
-        .services { display:flex; flex-direction:column; gap:18px; align-items:center; }
+h1 { font-size:28px; margin-bottom:20px; color:#333; }
 
-        .service-box {
-            width:70%; background:white; padding:18px; border-radius:12px;
-            font-size:20px; font-weight:600; text-decoration:none; color:#333;
-            border:1px solid #ddd; box-shadow:0 2px 6px rgba(0,0,0,0.05);
-            text-align:center; transition:0.2s;
-        }
-        .service-box:hover { background:#EFEFEF; }
-    </style>
+.service-box {
+    background:white; padding:20px; border-radius:12px;
+    border:1px solid #ddd; box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    margin-bottom:15px; text-decoration:none; color:#333;
+    display:block; font-size:20px;
+}
+
+.box {
+    background:white; padding:25px; border-radius:12px;
+    border:1px solid #ddd; box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    margin-top:25px;
+}
+
+.contact-link { color:#4A9E02; font-size:18px; }
+
+.whatsapp-btn {
+    display:inline-block; padding:12px 25px;
+    background:#25D366; color:white; border-radius:8px;
+    text-decoration:none; font-size:17px; margin-top:15px;
+}
+</style>
 </head>
 
 <body>
@@ -41,13 +52,23 @@
         <a href="english.html" class="lang-btn en-btn">EN</a>
     </div>
 
-    <h1 class="hero-title">AI Services</h1>
+    <h1>AI Services</h1>
+    <p>I provide writing and analysis services powered by artificial intelligence, with a calm and clear style.</p>
 
-    <div class="services">
-        <a href="about-en.html" class="service-box">About Me</a>
-        <a href="analysis-en.html" class="service-box">Text Analysis</a>
-        <a href="images-en.html" class="service-box">Image Analysis</a>
-        <a href="writing-en.html" class="service-box">Content Writing</a>
+    <a href="about-en.html" class="service-box">About Me</a>
+    <a href="analysis-text-en.html" class="service-box">Text Analysis</a>
+    <a href="analysis-image-en.html" class="service-box">Image Analysis</a>
+    <a href="writing-en.html" class="service-box">Content Writing</a>
+
+    <!-- Contact box inside the English homepage -->
+    <div class="box">
+        <h2>Contact</h2>
+
+        <p>Email:</p>
+        <p><a class="contact-link" href="mailto:ami159@outlook.it">ami159@outlook.it</a></p>
+
+        <p>WhatsApp:</p>
+        <a href="https://wa.me/33780709930" class="whatsapp-btn">WhatsApp Chat</a>
     </div>
 
 </div>
