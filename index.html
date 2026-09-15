@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- خطوط عربية -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: "Noto Sans Arabic", system-ui, sans-serif;
+            font-family: "Noto Sans Arabic", sans-serif;
             background-color: #f5f5f5;
             color: #222;
         }
@@ -46,13 +46,8 @@
             transition: 0.3s;
         }
 
-        .ar-btn {
-            background-color: #6B7A3A; /* زيتوني */
-        }
-
-        .en-btn {
-            background-color: #4A90E2; /* أزرق */
-        }
+        .ar-btn { background-color: #6B7A3A; }
+        .en-btn { background-color: #4A90E2; }
 
         .lang-btn:hover {
             transform: translateY(-2px);
@@ -60,77 +55,53 @@
         }
 
         /* العنوان الرئيسي */
-        .hero {
-            margin-bottom: 24px;
-        }
-
         .hero-title {
-            font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", system-ui, sans-serif;
-            font-size: 26px;
+            font-family: "IBM Plex Sans Arabic", sans-serif;
+            font-size: 28px;
             font-weight: 700;
             margin-bottom: 10px;
         }
 
         .hero-subtitle {
             font-size: 16px;
-            line-height: 1.7;
+            line-height: 1.8;
             color: #444;
         }
 
-        /* المستطيلات (القوائم) */
-        .sections-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 14px;
-            margin-top: 24px;
-        }
-
-        @media (min-width: 700px) {
-            .sections-grid {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-
+        /* المستطيلات العمودية */
         .section-card {
             background-color: white;
             border-radius: 14px;
-            padding: 14px 12px;
+            padding: 18px 14px;
+            margin-bottom: 16px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
         }
 
         .section-title {
-            font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", system-ui, sans-serif;
-            font-size: 18px;
+            font-family: "IBM Plex Sans Arabic", sans-serif;
+            font-size: 20px;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
         }
 
         .section-desc {
-            font-size: 14px;
-            line-height: 1.7;
+            font-size: 15px;
+            line-height: 1.8;
             color: #555;
         }
 
-        /* ألوان مختلفة للمستطيلات */
-        .section-writing   { border-top: 4px solid #6B7A3A; }
-        .section-analysis  { border-top: 4px solid #4A90E2; }
-        .section-images    { border-top: 4px solid #C96B3A; }
-        .section-learning  { border-top: 4px solid #8E44AD; }
-        .section-consult   { border-top: 4px solid #16A085; }
-        .section-contact   { border-top: 4px solid #D35400; }
+        /* ألوان هادئة مختلفة */
+        .writing   { border-top: 5px solid #6B7A3A; }
+        .analysis  { border-top: 5px solid #4A90E2; }
+        .images    { border-top: 5px solid #C96B3A; }
+        .learning  { border-top: 5px solid #8E44AD; }
+        .consult   { border-top: 5px solid #16A085; }
+        .contact   { border-top: 5px solid #D35400; }
 
-        /* قسم التواصل */
         .contact-info {
             margin-top: 10px;
-            font-size: 14px;
+            font-size: 15px;
             line-height: 1.8;
-        }
-
-        .contact-label {
-            font-weight: 600;
         }
 
         .contact-link {
@@ -144,6 +115,7 @@
         }
     </style>
 </head>
+
 <body>
 <div class="page">
 
@@ -153,88 +125,78 @@
         <a href="index-en.html" class="lang-btn en-btn">EN</a>
     </div>
 
-    <!-- الوصف الأدبي الهادئ -->
-    <section class="hero">
-        <h1 class="hero-title">بين الجبال ووادي رينو… تبدأ الفكرة بهدوء</h1>
-        <p class="hero-subtitle">
-            في طريق المشي اليومي، بين الأشجار والهواء البارد، تعلّمت أن الخطوة ليست مجرد حركة،
-            بل حالة من صفاء الذهن. من هذا الصفاء ولدت فكرة أن أقدّم خدمات تعتمد على الذكاء الاصطناعي،
-            لكن بروح إنسانية هادئة، وبأسلوب بسيط وواضح، يساعدك على رؤية ما وراء النص، وما وراء البيانات،
-            وما وراء الصورة.
-        </p>
-    </section>
+    <!-- الوصف الأدبي -->
+    <h1 class="hero-title">بين الجبال ووادي رينو… تبدأ الفكرة بهدوء</h1>
+    <p class="hero-subtitle">
+        في طريق المشي اليومي، بين الأشجار والهواء البارد، تعلّمت أن الخطوة ليست مجرد حركة،
+        بل حالة من صفاء الذهن. من هذا الصفاء ولدت فكرة أن أقدّم خدمات تعتمد على الذكاء الاصطناعي،
+        لكن بروح إنسانية هادئة، وبأسلوب بسيط وواضح، يساعدك على رؤية ما وراء النص، وما وراء البيانات،
+        وما وراء الصورة.
+    </p>
 
-    <!-- المستطيلات (القوائم) -->
-    <section class="sections-grid">
+    <!-- المستطيلات العمودية -->
 
-        <!-- الكتابة -->
-        <div class="section-card section-writing">
-            <div class="section-title">الكتابة</div>
-            <div class="section-desc">
-                صياغة نصوص هادئة وواضحة، تعتمد على الذكاء الاصطناعي،
-                لكن تحافظ على الأسلوب الإنساني القريب من القارئ:
-                مقالات، وصف خدمات، رسائل، محتوى صفحات، بصياغة متوازنة ومريحة للعين.
-            </div>
+    <div class="section-card writing">
+        <div class="section-title">الكتابة</div>
+        <div class="section-desc">
+            صياغة نصوص هادئة وواضحة تعتمد على الذكاء الاصطناعي،
+            مع الحفاظ على الأسلوب الإنساني القريب من القارئ:
+            مقالات، وصف خدمات، محتوى صفحات، وصياغة احترافية.
+        </div>
+    </div>
+
+    <div class="section-card analysis">
+        <div class="section-title">التحليل</div>
+        <div class="section-desc">
+            تحليل بيانات ونصوص لاستخراج الأفكار الأساسية،
+            وتقديم رؤى تساعدك على اتخاذ قرار،
+            بأسلوب منظم وهادئ يعتمد على أدوات الذكاء الاصطناعي.
+        </div>
+    </div>
+
+    <div class="section-card images">
+        <div class="section-title">الصور</div>
+        <div class="section-desc">
+            توصيف الصور، إبراز العناصر المهمة، وتنظيم المحتوى المرئي،
+            لمساعدتك على تحويل الصورة إلى فكرة واضحة يمكن استخدامها في عرض أو مشروع.
+        </div>
+    </div>
+
+    <div class="section-card learning">
+        <div class="section-title">التعلّم</div>
+        <div class="section-desc">
+            شرح مفاهيم الذكاء الاصطناعي بأسلوب بسيط،
+            وتعليم استخدام الأدوات خطوة بخطوة،
+            حتى يصبح التعامل مع هذه التقنيات جزءًا طبيعيًا من عملك اليومي.
+        </div>
+    </div>
+
+    <div class="section-card consult">
+        <div class="section-title">الاستشارة</div>
+        <div class="section-desc">
+            توجيه هادئ يساعدك على اختيار الأدوات المناسبة،
+            وترتيب خطوات العمل، وبناء طريقة استخدام مستقرة للذكاء الاصطناعي
+            في مشروعك أو عملك الشخصي.
+        </div>
+    </div>
+
+    <div class="section-card contact">
+        <div class="section-title">التواصل</div>
+        <div class="section-desc">
+            إذا شعرت أن ما قرأته يشبه ما تبحث عنه،
+            يمكننا أن نبدأ بخطوة صغيرة عبر البريد أو الواتساب،
+            ثم نبني بعدها طريقة عمل تناسبك.
         </div>
 
-        <!-- التحليل -->
-        <div class="section-card section-analysis">
-            <div class="section-title">التحليل</div>
-            <div class="section-desc">
-                تحليل بيانات ونصوص لاستخراج الأفكار الأساسية،
-                وتلخيص المحتوى، وتقديم رؤى تساعدك على اتخاذ قرار،
-                بأسلوب منظم، هادئ، بعيد عن التعقيد، يعتمد على أدوات الذكاء الاصطناعي.
-            </div>
-        </div>
+        <div class="contact-info">
+            البريد الإلكتروني:
+            <a class="contact-link" href="mailto:amil59@outlook.it">amil59@outlook.it</a><br>
 
-        <!-- الصور -->
-        <div class="section-card section-images">
-            <div class="section-title">الصور</div>
-            <div class="section-desc">
-                توصيف الصور، إبراز العناصر المهمة، تنظيم المحتوى المرئي،
-                ومساعدتك على تحويل الصورة إلى فكرة واضحة يمكن استخدامها في عرض أو محتوى أو مشروع.
-            </div>
+            واتساب مباشر:
+            <a class="contact-link" href="https://wa.me/33780709930" target="_blank">+33 780709930</a>
         </div>
-
-        <!-- التعلم -->
-        <div class="section-card section-learning">
-            <div class="section-title">التعلّم</div>
-            <div class="section-desc">
-                شرح مفاهيم الذكاء الاصطناعي بأسلوب بسيط،
-                وتعليم استخدام الأدوات خطوة بخطوة، مع أمثلة عملية،
-                حتى يصبح التعامل مع هذه التقنيات جزءًا طبيعيًا من عملك اليومي.
-            </div>
-        </div>
-
-        <!-- الاستشارة -->
-        <div class="section-card section-consult">
-            <div class="section-title">الاستشارة</div>
-            <div class="section-desc">
-                توجيه هادئ وواضح، يساعدك على اختيار الأدوات المناسبة،
-                وترتيب خطوات العمل، وبناء طريقة استخدام مستقرة للذكاء الاصطناعي
-                في مشروعك أو عملك الشخصي.
-            </div>
-        </div>
-
-        <!-- التواصل -->
-        <div class="section-card section-contact">
-            <div class="section-title">التواصل</div>
-            <div class="section-desc">
-                إذا شعرت أن ما قرأته يشبه ما تبحث عنه،
-                يمكننا أن نبدأ بخطوة صغيرة، هادئة، عبر البريد أو الواتساب،
-                ثم نبني بعدها طريقة عمل تناسبك.
-            </div>
-            <div class="contact-info">
-                <span class="contact-label">البريد الإلكتروني:</span>
-                <a class="contact-link" href="mailto:amil59@outlook.it">amil59@outlook.it</a><br>
-                <span class="contact-label">واتساب مباشر:</span>
-                <a class="contact-link" href="https://wa.me/33780709930" target="_blank">+33 780709930</a>
-            </div>
-        </div>
-
-    </section>
+    </div>
 
 </div>
 </body>
 </html>
-
