@@ -6,7 +6,6 @@
     <title>عبدالإله – خدمات الذكاء الاصطناعي</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- خطوط عربية -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -24,7 +23,6 @@
             padding: 20px 16px 40px;
         }
 
-        /* زر اللغة داخل دائرتين */
         .lang-switch {
             display: flex;
             gap: 12px;
@@ -42,18 +40,11 @@
             font-weight: 700;
             text-decoration: none;
             font-size: 17px;
-            transition: 0.3s;
         }
 
         .ar-btn { background-color: #6B7A3A; }
         .en-btn { background-color: #4A90E2; }
 
-        .lang-btn:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-
-        /* العنوان الرئيسي */
         .hero-title {
             font-family: "IBM Plex Sans Arabic", sans-serif;
             font-size: 28px;
@@ -61,56 +52,27 @@
             margin-bottom: 10px;
         }
 
-        .hero-subtitle {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #444;
+        .services {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 25px;
         }
 
-        /* المستطيلات العمودية */
-        .section-card {
-            background-color: white;
-            border-radius: 14px;
-            padding: 18px 14px;
-            margin-bottom: 16px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-        }
-
-        .section-title {
-            font-family: "IBM Plex Sans Arabic", sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .section-desc {
-            font-size: 15px;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        /* ألوان هادئة مختلفة */
-        .writing   { border-top: 5px solid #6B7A3A; }
-        .analysis  { border-top: 5px solid #4A90E2; }
-        .images    { border-top: 5px solid #C96B3A; }
-        .learning  { border-top: 5px solid #8E44AD; }
-        .consult   { border-top: 5px solid #16A085; }
-        .contact   { border-top: 5px solid #D35400; }
-
-        .contact-info {
-            margin-top: 10px;
-            font-size: 15px;
-            line-height: 1.8;
-        }
-
-        .contact-link {
-            color: #4A90E2;
-            text-decoration: none;
+        .service-box {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 18px;
             font-weight: 600;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+            transition: 0.2s;
         }
 
-        .contact-link:hover {
-            text-decoration: underline;
+        .service-box:hover {
+            background: #e9e9e9;
         }
     </style>
 </head>
@@ -118,88 +80,22 @@
 <body>
 <div class="page">
 
-    <!-- زر اللغة -->
     <div class="lang-switch">
         <a href="index.html" class="lang-btn ar-btn">AR</a>
         <a href="index-en.html" class="lang-btn en-btn">EN</a>
     </div>
 
-    <!-- الوصف الأدبي -->
-    <h1 class="hero-title">بين الجبال ووادي رينو… تبدأ الفكرة بهدوء</h1>
-    <p class="hero-subtitle">
-        في طريق المشي اليومي، بين الأشجار والهواء البارد، تعلّمت أن الخطوة ليست مجرد حركة،
-        بل حالة من صفاء الذهن. من هذا الصفاء ولدت فكرة أن أقدّم خدمات تعتمد على الذكاء الاصطناعي،
-        لكن بروح إنسانية هادئة، وبأسلوب بسيط وواضح، يساعدك على رؤية ما وراء النص، وما وراء البيانات،
-        وما وراء الصورة.
-    </p>
+    <h1 class="hero-title">خدمات الذكاء الاصطناعي</h1>
 
-    <!-- المستطيلات العمودية -->
+    <div class="services">
 
-    <div class="section-card writing">
-        <div class="section-title">الكتابة</div>
-        <div class="section-desc">
-            صياغة نصوص هادئة وواضحة تعتمد على الذكاء الاصطناعي،
-            مع الحفاظ على الأسلوب الإنساني القريب من القارئ:
-            مقالات، وصف خدمات، محتوى صفحات، وصياغة احترافية.
-        </div>
-    </div>
+        <a href="about.html" class="service-box">من أنا</a>
 
-    <div class="section-card analysis">
-        <div class="section-title">التحليل</div>
-        <div class="section-desc">
-            تحليل بيانات ونصوص لاستخراج الأفكار الأساسية،
-            وتقديم رؤى تساعدك على اتخاذ قرار،
-            بأسلوب منظم وهادئ يعتمد على أدوات الذكاء الاصطناعي.
-        </div>
-    </div>
+        <a href="#" class="service-box">تحليل النصوص</a>
+        <a href="#" class="service-box">تنسيق الصور</a>
+        <a href="#" class="service-box">كتابة المحتوى</a>
+        <a href="#" class="service-box">خدمات أخرى</a>
 
-    <div class="section-card images">
-        <div class="section-title">الصور</div>
-        <div class="section-desc">
-            توصيف الصور، إبراز العناصر المهمة، وتنظيم المحتوى المرئي،
-            لمساعدتك على تحويل الصورة إلى فكرة واضحة يمكن استخدامها في عرض أو مشروع.
-        </div>
-    </div>
-
-    <div class="section-card learning">
-        <div class="section-title">التعلّم</div>
-        <div class="section-desc">
-            شرح مفاهيم الذكاء الاصطناعي بأسلوب بسيط،
-            وتعليم استخدام الأدوات خطوة بخطوة،
-            حتى يصبح التعامل مع هذه التقنيات جزءًا طبيعيًا من عملك اليومي.
-        </div>
-    </div>
-
-    <div class="section-card consult">
-        <div class="section-title">الاستشارة</div>
-        <div class="section-desc">
-            توجيه هادئ يساعدك على اختيار الأدوات المناسبة،
-            وترتيب خطوات العمل، وبناء طريقة استخدام مستقرة للذكاء الاصطناعي
-            في مشروعك أو عملك الشخصي.
-        </div>
-    </div>
-
-    <div class="section-card contact">
-        <div class="section-title">التواصل</div>
-        <div class="section-desc">
-            إذا شعرت أن ما قرأته يشبه ما تبحث عنه،
-            يمكننا أن نبدأ بخطوة صغيرة عبر البريد أو الواتساب،
-            ثم نبني بعدها طريقة عمل تناسبك.
-        </div>
-
-        <div class="contact-info">
-            البريد الإلكتروني:
-            <a class="contact-link" href="mailto:amil59@outlook.it">amil59@outlook.it</a>
-        </div>
-
-        <!-- زر واتساب مباشر مثل زر الإنجليزية -->
-        <div style="text-align:center; margin-top:15px;">
-            <a href="https://wa.me/33780709930"
-               style="display:inline-block; padding:12px 25px; background:#25D366; color:white;
-                      border-radius:8px; text-decoration:none; font-size:18px; font-weight:700;">
-                تواصل عبر واتساب
-            </a>
-        </div>
     </div>
 
 </div>
