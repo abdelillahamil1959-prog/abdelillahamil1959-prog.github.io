@@ -1,202 +1,240 @@
+
+
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>خدمات الذكاء الاصطناعي</title>
+    <meta charset="UTF-8">
+    <title>عبدالإله – خدمات الذكاء الاصطناعي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- الخطوط -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- خطوط عربية -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@600;700&display=swap" rel="stylesheet">
 
-<style>
-    body {
-        margin: 0;
-        font-family: 'Noto Sans Arabic', sans-serif;
-        background-color: #f5f5f5;
-        direction: rtl;
-    }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Sans Arabic", system-ui, sans-serif;
+            background-color: #f5f5f5;
+            color: #222;
+        }
 
-    /* زر اللغة */
-    .lang-switch {
-        display: flex;
-        gap: 10px;
-        padding: 15px;
-    }
-    .lang-switch a {
-        width: 45px;
-        height: 45px;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        font-weight: bold;
-        text-decoration: none;
-    }
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 16px 40px;
+        }
 
-    /* صورة الهيدر */
-    .hero img {
-        width: 100%;
-        height: 380px;
-        object-fit: cover;
-        display: block;
-        border-bottom: 4px solid #ddd;
-    }
+        /* زر اللغة داخل دائرتين */
+        .lang-switch {
+            display: flex;
+            gap: 12px;
+            padding: 10px 0 20px;
+        }
 
-    /* الشعار */
-    .logo {
-        text-align: center;
-        padding: 25px 0 10px 0;
-    }
-    .logo img {
-        width: 140px;
-        opacity: 0.85;
-    }
+        .lang-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.3s;
+        }
 
-    /* الأزرار */
-    .buttons {
-        text-align: center;
-        margin: 20px 0;
-    }
-    .buttons a {
-        display: inline-block;
-        color: white;
-        padding: 12px 22px;
-        margin: 6px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 17px;
-        transition: 0.3s;
-    }
-    .buttons a:hover {
-        transform: translateY(-2px);
-        opacity: 0.9;
-    }
+        .ar-btn {
+            background-color: #6B7A3A; /* زيتوني */
+        }
 
-    /* الأقسام */
-    .section {
-        background: white;
-        margin: 20px auto;
-        padding: 20px;
-        width: 90%;
-        border-radius: 10px;
-        box-shadow: 0 0 10px #ddd;
-        font-size: 18px;
-        line-height: 1.7;
-        transition: 0.3s;
-    }
-    .section:hover {
-        box-shadow: 0 0 14px #ccc;
-    }
+        .en-btn {
+            background-color: #4A90E2; /* أزرق */
+        }
 
-    /* العناوين بخط IBM Plex Sans Arabic */
-    .section h3 {
-        margin-top: 0;
-        color: #333;
-        font-family: 'IBM Plex Sans Arabic', sans-serif;
-        font-size: 26px; /* تكبير العنوان */
-        font-weight: 600;
-    }
+        .lang-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
 
-    /* زر الواتساب */
-    .whatsapp {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        background-color: #25D366;
-        color: white;
-        padding: 14px 20px;
-        border-radius: 50px;
-        font-size: 18px;
-        text-decoration: none;
-        box-shadow: 0 0 10px #999;
-    }
-</style>
+        /* العنوان الرئيسي */
+        .hero {
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", system-ui, sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        /* المستطيلات (القوائم) */
+        .sections-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        @media (min-width: 700px) {
+            .sections-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .section-card {
+            background-color: white;
+            border-radius: 14px;
+            padding: 14px 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .section-title {
+            font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", system-ui, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .section-desc {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* ألوان مختلفة للمستطيلات */
+        .section-writing   { border-top: 4px solid #6B7A3A; }
+        .section-analysis  { border-top: 4px solid #4A90E2; }
+        .section-images    { border-top: 4px solid #C96B3A; }
+        .section-learning  { border-top: 4px solid #8E44AD; }
+        .section-consult   { border-top: 4px solid #16A085; }
+        .section-contact   { border-top: 4px solid #D35400; }
+
+        /* قسم التواصل */
+        .contact-info {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .contact-label {
+            font-weight: 600;
+        }
+
+        .contact-link {
+            color: #4A90E2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
+<div class="page">
 
-<!-- زر اللغة -->
-<div class="lang-switch">
-    <a href="index.html" style="background:#6B7A3A;">AR</a>
-    <a href="index-en.html" style="background:#4A90E2;">EN</a>
+    <!-- زر اللغة -->
+    <div class="lang-switch">
+        <a href="index.html" class="lang-btn ar-btn">AR</a>
+        <a href="index-en.html" class="lang-btn en-btn">EN</a>
+    </div>
+
+    <!-- الوصف الأدبي الهادئ -->
+    <section class="hero">
+        <h1 class="hero-title">بين الجبال ووادي رينو… تبدأ الفكرة بهدوء</h1>
+        <p class="hero-subtitle">
+            في طريق المشي اليومي، بين الأشجار والهواء البارد، تعلّمت أن الخطوة ليست مجرد حركة،
+            بل حالة من صفاء الذهن. من هذا الصفاء ولدت فكرة أن أقدّم خدمات تعتمد على الذكاء الاصطناعي،
+            لكن بروح إنسانية هادئة، وبأسلوب بسيط وواضح، يساعدك على رؤية ما وراء النص، وما وراء البيانات،
+            وما وراء الصورة.
+        </p>
+    </section>
+
+    <!-- المستطيلات (القوائم) -->
+    <section class="sections-grid">
+
+        <!-- الكتابة -->
+        <div class="section-card section-writing">
+            <div class="section-title">الكتابة</div>
+            <div class="section-desc">
+                صياغة نصوص هادئة وواضحة، تعتمد على الذكاء الاصطناعي،
+                لكن تحافظ على الأسلوب الإنساني القريب من القارئ:
+                مقالات، وصف خدمات، رسائل، محتوى صفحات، بصياغة متوازنة ومريحة للعين.
+            </div>
+        </div>
+
+        <!-- التحليل -->
+        <div class="section-card section-analysis">
+            <div class="section-title">التحليل</div>
+            <div class="section-desc">
+                تحليل بيانات ونصوص لاستخراج الأفكار الأساسية،
+                وتلخيص المحتوى، وتقديم رؤى تساعدك على اتخاذ قرار،
+                بأسلوب منظم، هادئ، بعيد عن التعقيد، يعتمد على أدوات الذكاء الاصطناعي.
+            </div>
+        </div>
+
+        <!-- الصور -->
+        <div class="section-card section-images">
+            <div class="section-title">الصور</div>
+            <div class="section-desc">
+                توصيف الصور، إبراز العناصر المهمة، تنظيم المحتوى المرئي،
+                ومساعدتك على تحويل الصورة إلى فكرة واضحة يمكن استخدامها في عرض أو محتوى أو مشروع.
+            </div>
+        </div>
+
+        <!-- التعلم -->
+        <div class="section-card section-learning">
+            <div class="section-title">التعلّم</div>
+            <div class="section-desc">
+                شرح مفاهيم الذكاء الاصطناعي بأسلوب بسيط،
+                وتعليم استخدام الأدوات خطوة بخطوة، مع أمثلة عملية،
+                حتى يصبح التعامل مع هذه التقنيات جزءًا طبيعيًا من عملك اليومي.
+            </div>
+        </div>
+
+        <!-- الاستشارة -->
+        <div class="section-card section-consult">
+            <div class="section-title">الاستشارة</div>
+            <div class="section-desc">
+                توجيه هادئ وواضح، يساعدك على اختيار الأدوات المناسبة،
+                وترتيب خطوات العمل، وبناء طريقة استخدام مستقرة للذكاء الاصطناعي
+                في مشروعك أو عملك الشخصي.
+            </div>
+        </div>
+
+        <!-- التواصل -->
+        <div class="section-card section-contact">
+            <div class="section-title">التواصل</div>
+            <div class="section-desc">
+                إذا شعرت أن ما قرأته يشبه ما تبحث عنه،
+                يمكننا أن نبدأ بخطوة صغيرة، هادئة، عبر البريد أو الواتساب،
+                ثم نبني بعدها طريقة عمل تناسبك.
+            </div>
+            <div class="contact-info">
+                <span class="contact-label">البريد الإلكتروني:</span>
+                <a class="contact-link" href="mailto:amil59@outlook.it">amil59@outlook.it</a><br>
+                <span class="contact-label">واتساب مباشر:</span>
+                <a class="contact-link" href="https://wa.me/33780709930" target="_blank">+33 780709930</a>
+            </div>
+        </div>
+
+    </section>
+
 </div>
-
-<!-- صورة الهيدر -->
-<div class="hero">
-    <img src="https://raw.githubusercontent.com/abdelillahamil1959-prog/abdelillahamil1959-prog.github.io/main/photo.jpg" alt="header">
-</div>
-
-<!-- الشعار -->
-<div class="logo">
-    <img src="lmImagine.png" alt="logo">
-</div>
-
-<!-- الأزرار -->
-<div class="buttons">
-    <a href="#about" style="background-color:#6B7A3A;">من أنا</a>
-    <a href="#nature" style="background-color:#4A90E2;">روح المكان</a>
-    <a href="#why" style="background-color:#555555;">لماذا الذكاء الاصطناعي؟</a>
-    <a href="#writing" style="background-color:#C9B89A;">الكتابة</a>
-    <a href="#analysis" style="background-color:#3FAF7F;">التحليل</a>
-    <a href="#images" style="background-color:#A88CC8;">الصور</a>
-    <a href="#learning" style="background-color:#8C6E63;">التعلم</a>
-    <a href="#consulting" style="background-color:#4A4A4A;">الاستشارة</a>
-    <a href="#contact" style="background-color:#7B7B7B;">التواصل</a>
-</div>
-
-<!-- الأقسام -->
-<div id="about" class="section">
-    <h3>من أنا</h3>
-    <p>أنا عبدالإله، أقدّم خدمات كتابة وتحليل باستخدام الذكاء الاصطناعي بأسلوب هادئ وواضح ومتوازن...</p>
-</div>
-
-<div id="nature" class="section">
-    <h3>روح المكان</h3>
-    <p>بين الجبال التي تحيط بالبلدة، وبجانب وادي رينو الذي يعبر الأرض بهدوء...</p>
-</div>
-
-<div id="why" class="section">
-    <h3>لماذا الذكاء الاصطناعي؟</h3>
-    <p>أستخدم الذكاء الاصطناعي كأداة تساعدني على العمل بدقة وسرعة...</p>
-</div>
-
-<div id="writing" class="section">
-    <h3>الكتابة</h3>
-    <p>خدمات كتابة احترافية باستخدام الذكاء الاصطناعي...</p>
-</div>
-
-<div id="analysis" class="section">
-    <h3>التحليل</h3>
-    <p>تحليل بيانات، استخراج أفكار، تلخيص، مقارنة...</p>
-</div>
-
-<div id="images" class="section">
-    <h3>الصور</h3>
-    <p>تعديل الصور، إزالة العناصر، تحسين الجودة...</p>
-</div>
-
-<div id="learning" class="section">
-    <h3>التعلم</h3>
-    <p>شرح مفاهيم الذكاء الاصطناعي، تعليم الأدوات...</p>
-</div>
-
-<div id="consulting" class="section">
-    <h3>الاستشارة</h3>
-    <p>توجيهات عملية، خطوات واضحة، مساعدات تقنية...</p>
-</div>
-
-<div id="contact" class="section">
-    <h3>التواصل</h3>
-    <p>للتواصل عبر الإيميل: <strong>amil59@outlook.it</strong></p>
-    <p>أو عبر الواتساب مباشرة.</p>
-</div>
-
-<!-- زر الواتساب -->
-<a class="whatsapp" href="https://wa.me/212000000000">تواصل عبر واتساب</a>
-
 </body>
 </html>
-
 
