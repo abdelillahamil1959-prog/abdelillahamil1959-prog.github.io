@@ -12,6 +12,7 @@
             color: #333;
             margin: 0;
             padding: 20px;
+            padding-bottom: 70px;
         }
         .container {
             max-width: 650px;
@@ -56,6 +57,26 @@
             color: #555;
             line-height: 1.6;
         }
+        .stats-box {
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+        .stat-item h3 {
+            margin: 0;
+            color: #0066cc;
+            font-size: 20px;
+        }
+        .stat-item p {
+            margin: 5px 0 0 0;
+            font-size: 13px;
+            color: #666;
+        }
         .card {
             background: #fff;
             padding: 22px;
@@ -82,6 +103,38 @@
         }
         .btn-whatsapp:hover {
             background-color: #1ebe5d;
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .floating-whatsapp:hover {
+            background-color: #1ebe5d;
+        }
+        .faq-card {
+            background: #fff;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 5px;
         }
         .testimonial-card {
             background: #fffdf0;
@@ -122,6 +175,22 @@
 
     <h1>Professional AI Services</h1>
     <p>I provide professional writing and analysis services powered by artificial intelligence, ensuring high accuracy and prompt delivery.</p>
+
+    <!-- Stats Box -->
+    <div class="stats-box">
+        <div class="stat-item">
+            <h3>+50</h3>
+            <p>Successful Projects</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>Client Satisfaction</p>
+        </div>
+        <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Quick Support</p>
+        </div>
+    </div>
 
     <!-- About Me Section -->
     <div class="card">
@@ -171,7 +240,25 @@
         <p>"Fast response and amazing work quality that exceeded expectations. Thank you!"</p>
         <div class="testimonial-author">- Khamsat Client</div>
     </div>
+
+    <!-- FAQ Section -->
+    <h2 style="font-size: 22px; margin-top: 25px; margin-bottom: 15px; color: #222;">❓ FAQ</h2>
+
+    <div class="faq-card">
+        <div class="faq-question">How can I start an order with you?</div>
+        <p style="margin: 0; font-size: 14px;">You can contact me directly via WhatsApp or send your project details through email.</p>
+    </div>
+
+    <div class="faq-card">
+        <div class="faq-question">What is the usual delivery time?</div>
+        <p style="margin: 0; font-size: 14px;">I strive to deliver projects as quickly as possible with top quality, often completed within a few hours.</p>
+    </div>
 </div>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/33780709930" class="floating-whatsapp" target="_blank">
+    💬 WhatsApp Me
+</a>
 
 </body>
 </html>
