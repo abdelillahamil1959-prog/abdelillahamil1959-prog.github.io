@@ -12,6 +12,7 @@
             color: #333;
             margin: 0;
             padding: 20px;
+            padding-bottom: 70px; /* مساحة للزر العائم */
         }
         .container {
             max-width: 650px;
@@ -56,6 +57,27 @@
             color: #555;
             line-height: 1.6;
         }
+        /* إحصائيات سريعة */
+        .stats-box {
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+        .stat-item h3 {
+            margin: 0;
+            color: #0066cc;
+            font-size: 20px;
+        }
+        .stat-item p {
+            margin: 5px 0 0 0;
+            font-size: 13px;
+            color: #666;
+        }
         .card {
             background: #fff;
             padding: 22px;
@@ -82,6 +104,40 @@
         }
         .btn-whatsapp:hover {
             background-color: #1ebe5d;
+        }
+        /* زر واتساب عائم */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .floating-whatsapp:hover {
+            background-color: #1ebe5d;
+        }
+        /* الأسئلة الشائعة */
+        .faq-card {
+            background: #fff;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 5px;
         }
         .testimonial-card {
             background: #fffdf0;
@@ -122,6 +178,22 @@
 
     <h1>خدمات الذكاء الاصطناعي الاحترافية</h1>
     <p>أقدم خدمات كتابة وتحليل احترافية مدعومة بالذكاء الاصطناعي، بدقة متناهية وسرعة في الإنجاز.</p>
+
+    <!-- شريط الإحصائيات -->
+    <div class="stats-box">
+        <div class="stat-item">
+            <h3>+50</h3>
+            <p>مشروع ناجح</p>
+        </div>
+        <div class="stat-item">
+            <h3>100%</h3>
+            <p>رضا العملاء</p>
+        </div>
+        <div class="stat-item">
+            <h3>24/7</h3>
+            <p>سرعة الرد</p>
+        </div>
+    </div>
 
     <!-- About Me Section -->
     <div class="card">
@@ -171,7 +243,25 @@
         <p>"سرعة في الاستجابة وجودة عمل مذهلة تفوق التوقعات. شكراً جزيلاً لك."</p>
         <div class="testimonial-author">- عميل من خمسات</div>
     </div>
+
+    <!-- FAQ Section -->
+    <h2 style="font-size: 22px; margin-top: 25px; margin-bottom: 15px; color: #222;">❓ الأسئلة الشائعة</h2>
+
+    <div class="faq-card">
+        <div class="faq-question">كيف يمكنني بدء الطلب معك؟</div>
+        <p style="margin: 0; font-size: 14px;">يمكنك التواصل معي مباشرة عبر زر الواتساب أو إرسال تفاصيل طلبك عبر البريد الإلكتروني.</p>
+    </div>
+
+    <div class="faq-card">
+        <div class="faq-question">ما هي مدة تسليم المشاريع عادة؟</div>
+        <p style="margin: 0; font-size: 14px;">أحرص على تسليم المشاريع في أسرع وقت ممكن وبأعلى جودة، وغالباً يتم الإنجاز خلال ساعات معدودة حسب حجم الطلب.</p>
+    </div>
 </div>
+
+<!-- زر الواتساب العائم -->
+<a href="https://wa.me/33780709930" class="floating-whatsapp" target="_blank">
+    💬 تواصل معي واتساب
+</a>
 
 </body>
 </html>
